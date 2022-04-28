@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/main/login";
+import Home from "./components/home";
 import Admin from "./components/admin";
 import Main from "./components/main";
 import User from "./components/user";
