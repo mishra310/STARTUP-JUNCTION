@@ -1,4 +1,3 @@
-//<button className="btn btn-danger">Bootstrap</button>
 import { Button } from "@mui/material";
 const Home = ({ username }) => {
     const getSum = (a, b) => {
@@ -68,4 +67,3 @@ const Home = ({ username }) => {
     );
   };
   
-  export default Home;
