@@ -1,26 +1,39 @@
-import logo from "./logo.svg";
+import React from 'react'
+import { useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./components/main/login";
-import Admin from "./components/admin";
-import Main from "./components/main";
-import User from "./components/user";
-import AdminProfile from "./components/admin/profile";
+//import Layout from '../containers/Layout'
+import Home from './components/Home';
+//import Login from '../containers/Login'
+//import RecoveryPassword from '../containers/RecoveryPassword'
+import NotFound from "./components/404";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Header from "./components/header";
+//import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Admin />} path="admin">
-          <Route element={<AdminProfile />} path="profile" />
-        </Route>
-        <Route element={<Main />} path="main"></Route>
-        <Route element={<User />} path="user"></Route>
+  const username = "Peter Parkr";
+  const age = 34;
+  const [darkTheme, setDarkTheme] = useState(false);
 
-        {/* <Route element={<Login />} path="/login"></Route> */}
-      </Routes>
-    </BrowserRouter>
+  return (
+    
+    <BrowserRouter>
+    <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+
+        <Routes>
+        <Route element={<Home username={username}></Home>} path="home" />
+            <Route element={<NotFound />} path="404" />
+            <Route element={<About />} path="about" />
+            <Route element={<Contact />} path="contact" />
+            <Route element={<Navigate to="/Home"></Navigate>} path="" />
+            <Route element={<Navigate to="/About"></Navigate>} path="" />
+            <Route element={<Navigate to="/Contact"></Navigate>} path="" />
+            <Route element={<Navigate to="/404"></Navigate>} path="*" />
+        </Routes>
+      </BrowserRouter>
   );
-}
+};
 
 export default App;
