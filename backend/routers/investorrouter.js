@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Model = require("../models/investormodel");
+const Model = require("../models/investorModel");
 
 router.get("/home", (req, res) => {
   console.log("request at investor home");

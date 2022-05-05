@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const Model = require("../models/startupmodel");
+const Model = require("../models/startupModel");
 
 router.get("/home", (req, res) => {
-  console.log("request at user home");
-  res.send("response from user home");
+  console.log("request at startup home");
+  res.send("response from startup home");
 });
 
 router.post("/add", (req, res) => {

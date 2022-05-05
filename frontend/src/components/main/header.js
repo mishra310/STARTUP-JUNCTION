@@ -1,14 +1,16 @@
 import {Button} from "@mui/material";
 import { NavLink } from "react-router-dom";
-import SMlogo from "../image/logo.svg"; 
 
 const Header = ({darkTheme, setDarkTheme}) => {
+
+   // const url = app_co
+
  return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <div className="container">
              <ul className="navbar-nav">
             <NavLink to="/home" className="nav-link">
-             <img src={SMlogo} alt="logo"  width = "80px" height="80px"/><h3>StartUpMuneem</h3>
+             <img src="http://localhost:5000/images/logo.svg" alt="logo"  width = "80px" height="80px"/><h3>StartUpMuneem</h3>
              </NavLink>           
              </ul>
         </div>

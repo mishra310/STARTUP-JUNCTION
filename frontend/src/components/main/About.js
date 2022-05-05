@@ -1,27 +1,41 @@
 import React from 'react'
-import SMlogo from "../image/logo.svg"; 
 
+
+
+    const myintro = (link, title, subtitle, category,category1) => {
+        return (
+          <div class="card">
+              
+            <img alt="" className="card-img-top" src="http://localhost:5000/images/logo.svg" width = "120px" height="120px" />
+            <div class="card-body">
+              <h3>{title}</h3>
+              <h6>{subtitle}</h6>
+              <id class="para">
+                  <p>" {category} "</p></id>
+              <p>{category1}</p>
+            </div>
+          </div>
+        );
+      };
+    
+    
 const About = () => {
-return (
-<div className="container emp-profile"> 
+    return (
+   
+ <div className="container emp-profile"> 
     <form method=""> 
-        <div className="row"> 
-            <div className="col-md-4"> 
-                <img src={SMlogo} alt="thapa" width = "100px"/>
-            </div>
-            
-            <div className="col-md-4"> 
-            <div className="profile-head">
-                <h5>StartupMuneem</h5>
-                <h6>A Medium Between Startup And Investor</h6>
-                <p className="profile-rating mt-3 mb-5">StartupMuneem <span></span></p>
-            </div>
-                
-            </div>
-
-        </div>
+        
+            {myintro(
+                //<img src={SMlogo} alt=" startupmuneem logo" width = "100px"/>,
+                "E:\DigiPod\Section 4\firstapp\src\image\logo.svg",
+                "StartUpMuneem",
+                "Funds Yahi Milte Hai",
+                "Once upon a time generating funds for a start-up was a back-breaking task",
+                "To prove this quote wrong we introduce you to StartupMuneem, a project that is designed with an idea to generate funds for start-ups by serving as a medium of communication between Start-ups and Investors."
+            )} 
     </form>
-</div>
+ </div>
+       
 );
 };
 export default About;

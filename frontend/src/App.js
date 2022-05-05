@@ -3,20 +3,21 @@ import { useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 //import Layout from '../containers/Layout'
-import Home from './components/Home';
+import Home from './components/main/home';
 //import Login from '../containers/Login'
 //import RecoveryPassword from '../containers/RecoveryPassword'
-import NotFound from "./components/404";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Header from "./components/header";
-//import Footer from "./components/Footer";
+import NotFound from "./components/main/404";
+import About from "./components/main/About";
+import Contact from "./components/main/Contact";
+import Header from "./components/main/header";
+import Footer from "./components/main/Footer";
+
 
 function App() {
   const username = "Peter Parkr";
   const age = 34;
   const [darkTheme, setDarkTheme] = useState(false);
-
+  
   return (
     
     <BrowserRouter>
@@ -27,13 +28,16 @@ function App() {
             <Route element={<NotFound />} path="404" />
             <Route element={<About />} path="about" />
             <Route element={<Contact />} path="contact" />
-            <Route element={<Navigate to="/Home"></Navigate>} path="" />
-            <Route element={<Navigate to="/About"></Navigate>} path="" />
-            <Route element={<Navigate to="/Contact"></Navigate>} path="" />
+            
+            <Route element={<Navigate to="/home"></Navigate>} path="/" />
             <Route element={<Navigate to="/404"></Navigate>} path="*" />
         </Routes>
+        <Footer/>
       </BrowserRouter>
+      
+  
   );
+
 };
 
 export default App;
