@@ -27,7 +27,62 @@
 .App-link {
   color: #61dafb;
 }
+.social-container {
+  background: #eee;
+  padding: 25px 50px;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.youtube {
+  color: black;
+}
 
+a.facebook {
+  color: black;
+}
+
+a.twitter {
+  color: black;
+}
+
+a.instagram {
+  color: black;
+}
+
+a.contact {    
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+a.contact:hover {
+  transform: translateY(-2px);
+}
+
+a.phone{
+  color: black;
+
+}
+a.envelope{
+  color: black;
+}
+.card{
+  padding: 25px 50px;
+}
+.card-body{
+  text-align: center;
+  padding: 25px;
+}
+.para{
+  font-style: italic;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
