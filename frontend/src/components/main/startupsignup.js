@@ -24,7 +24,7 @@ const StartupSignup = () => {
     // 4. Data format
 
     // to request on backend
-    fetch(url + "/user/add", {
+    fetch(url + "/startup/add", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: {
