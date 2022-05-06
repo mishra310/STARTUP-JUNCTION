@@ -1,8 +1,9 @@
 import { Button } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = ({ darkTheme, setDarkTheme }) => {
-  // const url = app_co
+  // const url = app_config.backend_url;
+  const navigate = useNavigate();
 
   return (
     <div id="preview" class="preview">
@@ -86,6 +87,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                       type="button"
                       class="btn btn-link px-3 mb-1 me-2"
                       aria-controls="#picker-editor"
+                      onClick={e => navigate('/')}
                     >
                       Login
                     </button>

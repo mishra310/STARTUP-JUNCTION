@@ -10,8 +10,6 @@ const schema = new mongoose.Schema({
   linkedInProfile : String,
   socialMediaHandle : String,
   description : String,
-
-
   createdAt: { type: Date, default: new Date() },
 });
 
