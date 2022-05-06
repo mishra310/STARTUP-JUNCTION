@@ -1,41 +1,23 @@
 import { Button } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faYoutube,
-    faFacebook,
-    faTwitter,
-    faInstagram
-  } from "@fortawesome/free-brands-svg-icons";
-  import { faPhone} from '@fortawesome/free-solid-svg-icons'
-  
 const Contact = ({ username }) => {
-  
     return (
-        <div class="social-container">
-      <h3>Social Follow</h3>
-      <a href="https://www.youtube.com/c/jamesqquick"
-        className="youtube social">
-        <FontAwesomeIcon icon={faYoutube} size="2x" />
-      </a>
-      <a href="https://www.facebook.com/learnbuildteach/"
-        className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="2x" />
-      </a>
-      <a href="https://www.twitter.com/jamesqquick" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="2x" />
-      </a>
-      <a href="https://www.instagram.com/learnbuildteach"
-        className="instagram social">
-        <FontAwesomeIcon icon={faInstagram} size="2x" />
-      </a>
-       
-      <a href="751007693" title="7510076937"
-        className="calling">
-           <FontAwesomeIcon icon={faPhone} size="2x" />
-</a>
-      
-
+        <div>
+         
+         <div class="jumbotron text-center">
+        <h1>Contact Us</h1>
+            <p>Oops! did we do something wrong?
+                Don't worry we have all ears on you </p>
+        <form class="form-inline">
+          <div class="input-group">
+           <input type="email" class="form-control" size="50" placeholder="Email Address" required/>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>
+    </div>
+  </form>
 </div>
+        </div>
+        //<button className="btn btn-danger">Boost</button>
         
     );
   };

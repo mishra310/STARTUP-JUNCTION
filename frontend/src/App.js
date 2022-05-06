@@ -3,18 +3,20 @@ import { useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 //import Layout from '../containers/Layout'
+//import ManageUser from './components/admin/manageuser';
 import Home from './components/main/home';
-//import Login from '../containers/Login'
+//import Login from './components/main/login';
 //import RecoveryPassword from '../containers/RecoveryPassword'
 import NotFound from "./components/main/404";
 import About from "./components/main/about";
 import Contact from "./components/main/contact";
 import Header from "./components/main/header";
 import Footer from "./components/main/footer";
+//import Signup from "./components/main/signup";
 
 
 function App() {
-  const username = "Peter Parkr";
+  const username = "Shikhar Srivastava";
   const age = 34;
   const [darkTheme, setDarkTheme] = useState(false);
   
