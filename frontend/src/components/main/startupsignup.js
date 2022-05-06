@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import React from "react";
 import app_config from "../../config";
 
-const Signup = () => {
+const StartupSignup = () => {
     const url = app_config.backend_url;
 
   // 1. create an object to initialize formik
@@ -111,4 +111,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default StartupSignup;

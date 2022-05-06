@@ -8,7 +8,7 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 import app_config from "../../config";
 
-const Login = ({ username, age }) => {
+const StartupLogin = ({ username, age }) => {
     const url = app_config.backend_url;
 
   // 1. formobject
@@ -104,4 +104,4 @@ const Login = ({ username, age }) => {
   );
 };
 
-export default Login;
+export default StartupLogin;

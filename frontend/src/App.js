@@ -49,11 +49,6 @@ function App() {
             <Route element={<Contact />} path="contact" />
             
             <Route element={<Navigate to="/Home"></Navigate>} path="" />
-            <Route element={<Navigate to="/About"></Navigate>} path="" />
-            <Route element={<Navigate to="/Contact"></Navigate>} path="" />
-            <Route element={<Navigate to="/404"></Navigate>} path="*" />
-            <Route element={<Navigate to="/StartupSignup"></Navigate>} path=""/>
-            <Route element={<Navigate to="/InvestorSignup"></Navigate>} path=""/>
             
 
         </Routes>
