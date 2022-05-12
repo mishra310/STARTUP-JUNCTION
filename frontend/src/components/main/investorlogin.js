@@ -23,7 +23,7 @@ const InvestorLogin = ({ username, age }) => {
   const loginSubmit = (formdata) => {
     console.log(formdata);
 
-    fetch(url + "/user/authenticate", {
+    fetch(url + "/investorlogin/authenticate", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: { "Content-Type": "application/json" },

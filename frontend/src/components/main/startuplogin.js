@@ -23,7 +23,7 @@ const StartupLogin = ({ username, age }) => {
   const loginSubmit = (formdata) => {
     console.log(formdata);
 
-    fetch(url + "/user/authenticate", {
+    fetch(url + "/startuplogin/authenticate", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: { "Content-Type": "application/json" },
