@@ -105,9 +105,12 @@ const StartupSignup = () => {
               />
             </form>
           )}
+          
         </Formik>
+        <p class="ro">Already Registered? <a href="./StartupLogin" >Sign in</a></p>
       </Container>
     </Paper>
+    
   );
 };
 

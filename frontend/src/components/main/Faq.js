@@ -1,23 +1,9 @@
-import { Button } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faYoutube,
-    faFacebook,
-    faTwitter,
-    faInstagram
-  } from "@fortawesome/free-brands-svg-icons";
-  import { faPhone} from '@fortawesome/free-solid-svg-icons'
-  import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
-  
-const Footer = () => {
-  
+import React from 'react'
+
+const Faq = () => {
     return (
-
-
-        <div class="social-container">
-            <h4 class="title-ans" >About Us</h4>
-            <p class="pa">StartupMuneem is a project that is designed with an idea to generate funds for start-ups by serving as a medium of communication between Start-ups and Investors."</p>
-            <h4 class="title-ans">FAQ</h4>
+        <div class="container faq">
+            <h1 class="title-anss">FAQs</h1>
             <h6 class="ans">What Makes Us Different</h6>
             <div class="ans"><p>Providing a security to people doing jobs</p>
             </div><p class="pa">On our platform a start-up will not only get experienced investors to pitch for an investment but it will also we getting people doing job as investors.</p>
@@ -31,36 +17,8 @@ const Footer = () => {
             </p>
             <p class="ans">Why Choose Us?</p>
             <p class="pa">Our niche is to establish a friendly relationship between a start-up and an investor by acting as medium of communication. the addition of job people as investors will provide more option to a start-up to choose from. </p>
-            
-            <h4 class="title-ans">Contact Us</h4>
-      <a href="7510076937"
-        className="phone contact">
-            <FontAwesomeIcon icon={faPhone} size="xl"  />
-</a>
-      <a href="devmarwaha.14@gmail.com"
-        className="envelope contact">
-            <FontAwesomeIcon icon={faEnvelope} size="xl"  />
-</a>
+            </div>  );
 
-      <h4 class="title-ans">Follow Us</h4>
-      
-      <a href=""
-        className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="xl" />
-      </a>
-      <a href="" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="xl" />
-      </a>
-      <a href=""
-        className="instagram social">
-        <FontAwesomeIcon icon={faInstagram} size="xl" />
-      </a>
-      
-      
-</div>
+};
+export default Faq;
 
-        
-    );
-  };
-
-export default Footer;

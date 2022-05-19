@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 .social-container {
-  background: #eee;
+  background: hsl(36, 100%, 51%) ;
   padding: 25px 50px;
 }
 a.social {
@@ -40,7 +40,7 @@ a.social:hover {
   transform: translateY(-2px);
 }
 a.youtube {
-  color: black;
+  color:white;
 }
 
 a.facebook {
@@ -52,7 +52,7 @@ a.twitter {
 }
 
 a.instagram {
-  color: black;
+  color:black;
 }
 
 a.contact {    
@@ -67,14 +67,16 @@ a.contact:hover {
 }
 
 a.phone{
-  color: black;
+  color:black;
 
 }
 a.envelope{
-  color: black;
+  color:black;
 }
 .card{
   padding: 25px 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .card-body{
   text-align: center;
@@ -82,6 +84,60 @@ a.envelope{
 }
 .para{
   font-style: italic;
+}
+.item{
+  text-align: center;
+}
+.prop{
+  text-align: right;
+  display: inline-block;
+}
+.pa{
+  color:black;
+}
+.title-ans{
+  color: black;
+  font-weight: bolder;
+}
+.title-anss{
+  padding-bottom: 20px;
+  font-size: 40px;
+  color: black;
+  font-weight: bolder;
+}
+.ans{
+  font-weight: bolder;
+  color: black;
+}
+.btn{
+
+  color: black;
+}
+.collapse{
+  padding-left: 295px;
+  font-weight: normal;
+  font-size: 20px;
+}
+.expand{
+  align-items: left;
+}
+.error{
+  padding-bottom: 50px;
+}
+.faq{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 50px;
+  font-size: 15px;
+  
+}
+.ro{
+  font-style: normal;
+  padding: 10px;
+  text-align: center;
+}
+.form{
+  align-items: center;
 }
 @keyframes App-logo-spin {
   from {

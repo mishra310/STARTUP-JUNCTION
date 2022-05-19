@@ -45,61 +45,87 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                   </div>
 
                   <div
-                    class="collapse navbar-collapse"
+                    class="expand navbar-expand-md"
                     id="navbarSupportedContent"
                   >
                     <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0">
-                      <li class="nav-item">
+                    <NavLink to="/home" className="nav-link">
+             <img src={"http://localhost:5000/images/logo.svg"} alt="logo"  width = "80px" height="80px"/>
+             </NavLink>
+             <li class="nav-item">
+               <li className="item">
                         <a
                           class="nav-link"
-                          href=""
+                          href="./Home"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
-                          Dashboard
+                          <h3>StartUpMuneem</h3>
+                          <p>Funding Yahi Milti Hai</p>
+                        </a>
+                      </li>
+                      </li>
+                      </ul>
+                      </div>
+                      
+                  <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0 ">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="./Home"
+                          aria-controls="#picker-editor"
+                          draggable="false"
+                        >
+                          Home  
+                        </a>
+                      
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="./About"
+                          aria-controls="#picker-editor"
+                          draggable="false"
+                        >
+                        |  About Us 
                         </a>
                       </li>
                       <li class="nav-item">
                         <a
                           class="nav-link"
-                          href=""
+                          href="./FAQ"
                           aria-controls="#picker-editor"
-                          draggable="false"
-                        >
-                          Team
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          class="nav-link"
-                          href=""
-                          aria-controls="#picker-editor"
-                          draggable="false"
-                        >
-                          Projects
+                          draggable="false">
+                          |  FAQs
                         </a>
                       </li>
                     </ul>
                   </div>
-
                   <div class="d-flex align-items-center">
-                    <button
+                       
+                      <button
                       type="button"
-                      class="btn btn-link px-3 mb-1 me-2"
+                      class="btn btn-warning px-3 mb-1 me-2"
                       aria-controls="#picker-editor"
-                      onClick={e => navigate('/')}
+                      onClick={e => navigate('./StartupSignup')}
                     >
-                      Login
+                      Register as a Start-Up
                     </button>
                     <button
-                      type="button"
-                      class="btn btn-primary mb-1 me-lg-3"
+                    type="button"
+                      class="btn btn-outline-warning mb-2 me-lg-3"
                       aria-controls="#picker-editor"
+                      onClick={e => navigate('./InvestorSignup')}
                     >
-                      Sign up
+                      Register as a Investor
                     </button>
                   </div>
-                </div>
+                  </div>
+                
               </nav>
             </section>
           </section>

@@ -32,7 +32,7 @@ const Home = ({ username }) => {
         <div className="row">
           <div className="col-md-4">
             {mycard(
-              "http://localhost:5000/images/logo.svg",
+              "http://localhost:5000/images/cover.jpg",
               "Startup Muneem",
               ""
             )}

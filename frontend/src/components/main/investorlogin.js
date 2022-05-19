@@ -100,6 +100,7 @@ const InvestorLogin = ({ username, age }) => {
           </CardContent>
         </Card>
       </Container>
+      
     </div>
   );
 };

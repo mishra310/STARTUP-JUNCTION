@@ -60,9 +60,11 @@ const InvestorSignup = () => {
   return (
     <Paper>
       <Container>
+        
         <Formik initialValues={userForm} onSubmit={userSubmit}>
           {({ values, handleSubmit, handleChange }) => (
             <form onSubmit={handleSubmit}>
+              
               <TextField
                 label="Username"
                 variant="outlined"
@@ -106,6 +108,7 @@ const InvestorSignup = () => {
             </form>
           )}
         </Formik>
+        <p class="ro">Already Registered? <a href="./InvestorLogin" >Sign in</a></p>
       </Container>
     </Paper>
   );

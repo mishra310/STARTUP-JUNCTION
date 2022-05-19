@@ -14,50 +14,42 @@ import Footer from "./components/main/footer";
 import StartupLogin from './components/main/startuplogin';
 import InvestorLogin from './components/main/investorlogin';
 import Main from './components/main';
-import Startupsignup from './components/main/startupsignup';
-import Investorsignup from './components/main/investorsignup';
-
-
+import Faq from './components/main/Faq';
+//import Sidebar from './components/main/sidebar';
+import StartupSignup from './components/main/startupsignup';
+import InvestorSignup from './components/main/investorsignup';
 
 function App() {
-  const username = "Shikhar Srivastava";
+  const username = "Shikhar";
   const age = 34;
   const [darkTheme, setDarkTheme] = useState(false);
-  
+
   return (
     
     <BrowserRouter>
     <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
 
         <Routes>
-        <Route element={<Main />} path="main" >
-          <Route element={<StartupLogin />} path="startuplogin" />
-          <Route element={<InvestorLogin />} path="investorlogin" />
-          <Route element={<Home />} path="home" />
-          <Route element={<About />} path="about" />
-          <Route element={<Startupsignup />} path="startupsignup" />
-          <Route element={<Investorsignup />} path="investorsignup" />
-          <Route element={<Contact />} path="contact" />
-
-        </Route>
-
-
-
         <Route element={<Home username={username}></Home>} path="home" />
             <Route element={<NotFound />} path="404" />
             <Route element={<About />} path="about" />
+            <Route element={<Faq />} path="faq" />
             <Route element={<Contact />} path="contact" />
+            <Route element={<InvestorSignup />} path="investorsignup" />
+            <Route element={<StartupSignup />} path="startupsignup" />
             
             <Route element={<Navigate to="/Home"></Navigate>} path="" />
-            
-
+            <Route element={<Navigate to="/About"></Navigate>} path="" />
+            <Route element={<Navigate to="/Faq"></Navigate>} path="" />
+            <Route element={<Navigate to="/Contact"></Navigate>} path="" />
+            <Route element={<Navigate to="/InvestorSignup"></Navigate>} path="" />
+            <Route element={<Navigate to="/StartupSignup"></Navigate>} path="" />
+            <Route element={<Navigate to="/404"></Navigate>} path="*" />
         </Routes>
         <Footer/>
+        
       </BrowserRouter>
-      
-  
   );
-
 };
 
 export default App;
