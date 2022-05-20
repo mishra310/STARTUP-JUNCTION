@@ -38,6 +38,19 @@ const Home = () => {
           
           
         </div>
+        <div class="jumbotron text-center">
+        <h1>Subscribe Now!</h1>
+            <p> Subscribe to get our daily news and promotions</p>
+        <form class="form-inline">
+          <div class="input-group">
+           <input type="email" class="form-control" size="50" placeholder="Email Address" required/>
+       <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+       </div>
+       </div>
+       </form>
+       </div>
+
       </div>
       
       
