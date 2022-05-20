@@ -6,6 +6,7 @@ import "./App.css";
 //import ManageUser from './components/admin/manageuser';
 import Home from './components/main/home';
 //import RecoveryPassword from '../containers/RecoveryPassword'
+import Dashboard from './components/admin/dashboard';
 import NotFound from "./components/main/404";
 import About from "./components/main/About";
 import Contact from "./components/main/Contact";
@@ -18,6 +19,7 @@ import Faq from './components/main/Faq';
 //import Sidebar from './components/main/sidebar';
 import StartupSignup from './components/main/startupsignup';
 import InvestorSignup from './components/main/investorsignup';
+
 
 function App() {
   const age = 34;
@@ -38,6 +40,7 @@ function App() {
             <Route element={<StartupSignup />} path="startupsignup" />
             <Route element={<StartupLogin />} path="startuplogin" />
             <Route element={<InvestorLogin />} path="investorlogin" />
+            <Route element={<Dashboard />} path="dashboard" />
             
             <Route element={<Navigate to="/Home"></Navigate>} path="" />
             <Route element={<Navigate to="/About"></Navigate>} path="" />
@@ -48,6 +51,7 @@ function App() {
             <Route element={<Navigate to="/StartupLogin"></Navigate>} path="" />
             <Route element={<Navigate to="/InvestorLogin"></Navigate>} path="" />
             <Route element={<Navigate to="/404"></Navigate>} path="*" />
+            <Route element={<Navigate to="/Dashboard"></Navigate>} path="" />
         </Routes>
         <Footer/>
               </BrowserRouter>

@@ -33,14 +33,14 @@ const Footer = () => {
             <p class="pa">Our niche is to establish a friendly relationship between a start-up and an investor by acting as medium of communication. the addition of job people as investors will provide more option to a start-up to choose from. </p>
             
             <h4 class="title-ans">Contact Us</h4>
-      <a href="7510076937"
+      <h6><a href=""
         className="phone contact">
-            <FontAwesomeIcon icon={faPhone} size="xl"  />
-</a>
-      <a href="startupmuneem3@gmail.com"
+            <FontAwesomeIcon icon={faPhone} size="xl"  />  7617816254
+</a> </h6>
+      <h6><a href=""
         className="envelope contact">
-            <FontAwesomeIcon icon={faEnvelope} size="xl"  />
-</a>
+            <FontAwesomeIcon icon={faEnvelope} size="xl"  />  startupmuneem3@gmail.com
+</a> </h6>
 
       <h4 class="title-ans">Follow Us</h4>
       
@@ -51,7 +51,7 @@ const Footer = () => {
       <a href="https://twitter.com/MuneemStartup" className="twitter social">
         <FontAwesomeIcon icon={faTwitter} size="xl" />
       </a>
-      <a href=""
+      <a href="https://www.instagram.com/startupmuneem/?hl=en"
         className="instagram social">
         <FontAwesomeIcon icon={faInstagram} size="xl" />
       </a>
