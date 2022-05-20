@@ -1,6 +1,7 @@
 import { Button, Container, Paper, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import app_config from "../../config";
 
 const StartupSignup = () => {
@@ -107,7 +108,7 @@ const StartupSignup = () => {
           )}
           
         </Formik>
-        <p class="ro">Already Registered? <a href="./StartupLogin" >Sign in</a></p>
+        <p class="ro">Already Registered? <NavLink to="/StartupLogin" >Sign in</NavLink></p>
       </Container>
     </Paper>
     

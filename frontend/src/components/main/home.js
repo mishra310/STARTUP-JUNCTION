@@ -1,58 +1,46 @@
 import { Button } from "@mui/material";
-const Home = ({ username }) => {
+import { NavLink, useNavigate } from "react-router-dom";
+import SimpleImageSlider from "react-simple-image-slider";
+
+const Home = () => {
   //<button className="btn btn-danger">Bootstrap</button>  
   const getSum = (a, b) => {
       return a + b;
     };
-  
-    const mycard = (link, title, category) => {
+    const navigate = useNavigate();
+
+    const mycard = (link, category) => {
       return (
-        <div className="card">
-          <img alt="" className="card-img-top" src={link} />
-          <div className="card-body">
-            <h4>{title}</h4>
-            <p> {category}</p>
-
-          <Button color="secondary" className="mt-5" variant="contained">View More</Button>
-
+        <div class="card bg-white text-white" >
+          <img alt="partners" class="card-img"  src={link} />
+          <div class="card-img">
+           <p> {category}</p>
+           <button
+                      type="button"
+                      class="btn btn-warning px-3 mb-2 me-3"
+                      aria-controls="#picker-editor"
+                      onClick={e => navigate('./StartupSignup')}
+                    >
+                      View More
+                    </button>
           </div>
         </div>
       );
     };
   
     return (
-      <div className="container">
-        <h3 className="text-center bg-dark text-white">
-          Current User : {username}
-        </h3>
-        <h1>Startup Muneem</h1>
-        <h2></h2>
-        
-  
-        <div className="row">
-          <div className="col-md-4">
+      <div className="card">
+        <div className="card-body">
             {mycard(
-              "http://localhost:5000/images/cover.jpg",
-              "Startup Muneem",
+              "http://localhost:5000/images/temp1.jpg",
               ""
             )}
-          </div>
-          <div className="col-md-4">
-            {mycard(
-              "http://localhost:5000/images/logo.svg",
-              "Startup's",
-              ""
-            )}
-          </div>
-          <div className="col-md-4">
-            {mycard(
-              "http://localhost:5000/images/logo.svg",
-              "Investor's",
-              ""
-            )}
-          </div>
+          
+          
         </div>
       </div>
+      
+      
     );
   };
   

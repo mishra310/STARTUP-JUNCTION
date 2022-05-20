@@ -37,18 +37,18 @@ const Footer = () => {
         className="phone contact">
             <FontAwesomeIcon icon={faPhone} size="xl"  />
 </a>
-      <a href="devmarwaha.14@gmail.com"
+      <a href="startupmuneem3@gmail.com"
         className="envelope contact">
             <FontAwesomeIcon icon={faEnvelope} size="xl"  />
 </a>
 
       <h4 class="title-ans">Follow Us</h4>
       
-      <a href=""
+      <a href="https://www.facebook.com/Startup-Muneem-105782222143086"
         className="facebook social">
         <FontAwesomeIcon icon={faFacebook} size="xl" />
       </a>
-      <a href="" className="twitter social">
+      <a href="https://twitter.com/MuneemStartup" className="twitter social">
         <FontAwesomeIcon icon={faTwitter} size="xl" />
       </a>
       <a href=""

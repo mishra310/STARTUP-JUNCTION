@@ -77,6 +77,7 @@ a.envelope{
   padding: 25px 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
 .card-body{
   text-align: center;
@@ -110,8 +111,7 @@ a.envelope{
   color: black;
 }
 .btn{
-
-  color: black;
+    color: black;
 }
 .collapse{
   padding-left: 295px;
@@ -139,6 +139,22 @@ a.envelope{
 .form{
   align-items: center;
 }
+.partner{
+  align-items: left;
+
+}
+.card1{
+  align-items: left;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+}
+.card-body1{
+  align-items: left;
+  text-align: center;
+  padding: 25px
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

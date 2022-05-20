@@ -36,12 +36,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                       <i class="fas fa-bars"></i>
                     </button>
 
-                    <a class="navbar-brand ms-3" draggable="false">
-                      <i
-                        class="fas fa-gem text-primary"
-                        aria-controls="#picker-editor"
-                      ></i>
-                    </a>
+                    
                   </div>
 
                   <div
@@ -109,7 +104,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                        
                       <button
                       type="button"
-                      class="btn btn-warning px-3 mb-1 me-2"
+                      class="btn btn-warning px-3 mb-2 me-3"
                       aria-controls="#picker-editor"
                       onClick={e => navigate('./StartupSignup')}
                     >
@@ -117,7 +112,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                     </button>
                     <button
                     type="button"
-                      class="btn btn-outline-warning mb-2 me-lg-3"
+                      class="btn btn-outline-warning px-3 mb-2 me-lg-3"
                       aria-controls="#picker-editor"
                       onClick={e => navigate('./InvestorSignup')}
                     >
