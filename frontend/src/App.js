@@ -4,11 +4,12 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 //import Layout from '../containers/Layout'
 //import ManageUser from './components/admin/manageuser';
-import Home from './components/main/home';
+import Home from './components/main/slider';
 //import RecoveryPassword from '../containers/RecoveryPassword'
 import Dashboard from './components/admin/dashboard';
 import NotFound from "./components/main/404";
 import About from "./components/main/About";
+//import Slider from "./components/main/slider";
 import Contact from "./components/main/Contact";
 import Header from "./components/main/header";
 import Footer from "./components/main/footer";
@@ -54,6 +55,7 @@ function App() {
             <Route element={<Navigate to="/Dashboard"></Navigate>} path="" />
         </Routes>
         <Footer/>
+        
               </BrowserRouter>
   );
 };

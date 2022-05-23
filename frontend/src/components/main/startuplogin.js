@@ -56,10 +56,11 @@ const StartupLogin = ({ username, age }) => {
   // 3. use Formik
 
   return (
-    <div style={{ background: "#ccc" }}>
+    <div style={{ backgroundImage:"url('http://localhost:5000/images/startupbg.jpg')"  }}>
       <Container
         maxWidth="xs"
         sx={{
+          
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
