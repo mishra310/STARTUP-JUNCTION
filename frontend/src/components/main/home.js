@@ -4,20 +4,14 @@ import Slider from "./slider";
 import Features from "./Features";
 
 const Home = () => {
-      
-    return (
-      <div classname="container">
-        <Slider
-        />
-        <Features
+  return (
+    <div classname="container">
+      <Slider />
+      <Features />
+    </div>
 
-        />
-        </div>
-    
-  
-  //<button className="btn btn-danger">Bootstrap</button>  
-    
-    );
-  };
-  
-  export default Home;
+    //<button className="btn btn-danger">Bootstrap</button>
+  );
+};
+
+export default Home;
