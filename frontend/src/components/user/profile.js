@@ -138,11 +138,11 @@ const Profile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      label="Age"
+                      label="Description"
                       variant="filled"
-                      name="age"
+                      name="description"
                       onChange={handleChange}
-                      value={values.age}
+                      value={values.description}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -153,6 +153,79 @@ const Profile = (props) => {
                       onChange={handleChange}
                       value={values.password}
                     />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Username"
+                      variant="filled"
+                      name="username"
+                      onChange={handleChange}
+                      value={values.username}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Contact"
+                      variant="filled"
+                      name="contact"
+                      onChange={handleChange}
+                      value={values.contact}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Brochure"
+                      variant="filled"
+                      name="brochure"
+                      onChange={handleChange}
+                      value={values.brochure}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Avatar"
+                      variant="filled"
+                      name="avatar"
+                      onChange={handleChange}
+                      value={values.avatar}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Started On"
+                      variant="filled"
+                      name="started on"
+                      onChange={handleChange}
+                      value={values.startedon}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Amount Needed"
+                      variant="filled"
+                      name="amount needed"
+                      onChange={handleChange}
+                      value={values.amountneeded}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Reason"
+                      variant="filled"
+                      name="reason"
+                      onChange={handleChange}
+                      value={values.reason}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Social Media Handle"
+                      variant="filled"
+                      name="social media handle"
+                      onChange={handleChange}
+                      value={values.socialmedia}
+                    />
+                    <TextField
+                      className="mt-4 w-100"
+                      label="Website"
+                      variant="filled"
+                      name="website"
+                      onChange={handleChange}
+                      value={values.website}
+                    />
+
 
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
