@@ -4,6 +4,7 @@ const express = require("express");
 // importing userRouter
 const StartupRouter = require("./routers/startuprouter");
 const InvestorRouter = require("./routers/investorrouter");
+const UtilRouter = require("./routers/util");
 
 // importing cors
 const cors = require("cors");
@@ -27,6 +28,7 @@ app.use(express.static("./static"));
 // using middleware
 app.use("/user", StartupRouter);
 app.use("/investor", InvestorRouter);
+app.use("/util", UtilRouter);
 
 // endpoints or route
 app.get("/user", (req, res) => {

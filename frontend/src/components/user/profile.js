@@ -14,12 +14,12 @@ const Profile = (props) => {
   const url = app_config.backend_url;
 
   useEffect(() => {
-    fetch(url + "/user/getbyid/" + currentUser._id)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUpdateForm(data);
-      });
+    // fetch(url + "/user/getbyid/" + currentUser._id)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setUpdateForm(data);
+    //   });
     console.log(currentUser);
   }, []);
 
@@ -99,9 +99,7 @@ const Profile = (props) => {
                 src={
                   url +
                   "/uploads/" +
-                  (currentUser.avatar
-                    ? currentUser.avatar
-                    : "avatar_image.webp")
+                  (currentUser.avatar ? currentUser.avatar : "avatar_image.png")
                 }
                 className="img-fluid"
                 alt=""
@@ -126,9 +124,9 @@ const Profile = (props) => {
                       className="mt-4 w-100"
                       label="Full Name"
                       variant="filled"
-                      name="fullname"
+                      name="name"
                       onChange={handleChange}
-                      value={values.fullname}
+                      value={values.name}
                     />
                     <TextField
                       className="mt-4 w-100"
