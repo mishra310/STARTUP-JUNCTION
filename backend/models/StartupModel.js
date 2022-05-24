@@ -5,17 +5,14 @@ const schema = new mongoose.Schema({
   name: String,
   email: String,
   contact: Number,
-  description : String,
-  brochure : String,
-  companylogo : String,
-  Startedon : Number,
-  AmountNeeded : Number,
-  Reason : String,
-  socialMediaHandle : String,
-  website : String,
-  
-
-
+  description: String,
+  brochure: String,
+  avatar: String,
+  Startedon: Number,
+  AmountNeeded: Number,
+  Reason: String,
+  socialMediaHandle: String,
+  website: String,
   createdAt: { type: Date, default: new Date() },
 });
 

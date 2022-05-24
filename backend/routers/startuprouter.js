@@ -1,11 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Model = require("../models/startupModel");
-
-router.get("/home", (req, res) => {
-  console.log("request at startup home");
-  res.send("response from startup home");
-});
+const Model = require("../models/StartupModel");
 
 router.post("/add", (req, res) => {
   console.log(req.body);
@@ -14,8 +9,7 @@ router.post("/add", (req, res) => {
   new Model(req.body)
     .save()
     .then((data) => {
-      console.log("user saved!");
-      res.status(200).json({ message: "success" });
+      res.status(200).json(data);
     })
     .catch((err) => {
       console.error(err);
@@ -27,8 +21,6 @@ router.post("/authenticate", (req, res) => {
   const formdata = req.body;
 
   console.log(formdata);
-  console.log("Event Fire");
-
   Model.findOne({ email: formdata.email, password: formdata.password })
     .then((data) => {
       if (data) {
@@ -61,6 +53,17 @@ router.delete("/delete/:id", (req, res) => {
   Model.findByIdAndDelete(req.params.id)
     .then((data) => {
       console.log("user data deleted!");
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
+
+router.put("/update/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then((data) => {
       res.status(200).json(data);
     })
     .catch((err) => {
