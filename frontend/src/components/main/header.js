@@ -6,6 +6,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
   const navigate = useNavigate();
 
   return (
+    
     <div id="preview" class="preview">
       <div style={{display: 'none'}}></div>
       <div>
@@ -18,10 +19,10 @@ const Header = ({ darkTheme, setDarkTheme }) => {
           <section
             draggable="false"
             class="overflow-hidden pt-0"
-            data-v-271253ee=""
+            data-v-271253ee="" 
           >
             <section class="" style={{paddingBottom: '1px'}}>
-              <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-2">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-darkyellow shadow-2">
                 <div class="container-fluid">
                   <div class="d-flex">
                     <button
@@ -33,13 +34,14 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                       aria-expanded="false"
                       aria-label="Toggle navigation"
                     >
-                      <i class="fas fa-bars"></i>
+                      <i class="fas fa-bars" ></i>
                     </button>
 
                     
                   </div>
 
                   <div
+                  
                     class="expand navbar-expand-md"
                     id="navbarSupportedContent"
                   >
@@ -55,8 +57,8 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
-                          <h3>StartUpMuneem</h3>
-                          <p>Funding Yahi Milti Hai</p>
+                          <h3 class="he">StartUpMuneem</h3>
+                          <p class="hee">Funding Yahi Milti Hai</p>
                         </a>
                       </li>
                       </li>
@@ -68,7 +70,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                     id="navbarSupportedContent"
                   >
                     <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0 ">
-                      <li class="nav-item">
+                      <li class="nav-item it ">
                         <a
                           class="nav-link"
                           href="./Home"
@@ -79,7 +81,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                         </a>
                       
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item it">
                         <a
                           class="nav-link"
                           href="./About"
@@ -89,7 +91,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                         |  About Us 
                         </a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item it">
                         <a
                           class="nav-link"
                           href="./FAQ"
@@ -104,7 +106,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                        
                       <button
                       type="button"
-                      class="btn btn-warning px-3 mb-2 me-3"
+                      class="btn btn-dark px-3 mb-2 me-3"
                       aria-controls="#picker-editor"
                       onClick={e => navigate('./StartupSignup')}
                     >
@@ -112,7 +114,7 @@ const Header = ({ darkTheme, setDarkTheme }) => {
                     </button>
                     <button
                     type="button"
-                      class="btn btn-outline-warning px-3 mb-2 me-lg-3"
+                      class="btn btn-outline-dark px-3 mb-2 me-lg-3"
                       aria-controls="#picker-editor"
                       onClick={e => navigate('./InvestorSignup')}
                     >

@@ -6,7 +6,7 @@ import app_config from "../../config";
 
 const StartupSignup = () => {
     const url = app_config.backend_url;
-
+    
   // 1. create an object to initialize formik
   const userForm = {
     username: "",
@@ -61,6 +61,7 @@ const StartupSignup = () => {
   return (
     <Paper>
       <Container>
+      <div style={{ background:"hsl(36, 100%, 51%)"  }}>
         <Formik initialValues={userForm} onSubmit={userSubmit}>
           {({ values, handleSubmit, handleChange }) => (
             <form onSubmit={handleSubmit}>
@@ -109,6 +110,7 @@ const StartupSignup = () => {
           
         </Formik>
         <p class="ro">Already Registered? <NavLink to="/StartupLogin" >Sign in</NavLink></p>
+      </div>
       </Container>
     </Paper>
     

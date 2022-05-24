@@ -27,6 +27,8 @@ router.post("/authenticate", (req, res) => {
   const formdata = req.body;
 
   console.log(formdata);
+  console.log("Event Fire");
+
   Model.findOne({ email: formdata.email, password: formdata.password })
     .then((data) => {
       if (data) {
