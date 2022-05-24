@@ -6,6 +6,7 @@ import "./App.css";
 //import ManageUser from './components/admin/manageuser';
 import Home from './components/main/home';
 //import RecoveryPassword from '../containers/RecoveryPassword'
+import Dashboard from './components/admin/dashboard';
 import NotFound from "./components/main/404";
 import About from "./components/main/About";
 //import Slider from "./components/main/slider";
@@ -20,7 +21,7 @@ import Faq from './components/main/Faq';
 import StartupSignup from './components/main/startupsignup';
 import InvestorSignup from './components/main/investorsignup';
 import StartupList from './components/startup/StartupList';
-import Dashboard from './components/admin/dashboard';
+
 
 function App() {
   const age = 34;
@@ -43,7 +44,6 @@ function App() {
             <Route element={<StartupList />} path="startuplist" />
             <Route element={<InvestorLogin />} path="investorlogin" />
             <Route element={<Dashboard />} path="dashboard" />
-
             <Route element={<Navigate to="/Home"></Navigate>} path="" />
             <Route element={<Navigate to="/About"></Navigate>} path="" />
             <Route element={<Navigate to="/Faq"></Navigate>} path="" />
