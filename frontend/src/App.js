@@ -8,7 +8,7 @@ import Home from "./components/main/home";
 //import RecoveryPassword from '../containers/RecoveryPassword'
 import Dashboard from "./components/admin/dashboard";
 import NotFound from "./components/main/404";
-import About from "./components/main/About";
+import About from "./components/main/about";
 //import Slider from "./components/main/slider";
 import Contact from "./components/main/Contact";
 import Header from "./components/main/header";
