@@ -44,15 +44,15 @@ a.youtube {
 }
 
 a.facebook {
-  color: black;
+  color: white;
 }
 
 a.twitter {
-  color: black;
+  color: white;
 }
 
 a.instagram {
-  color:black;
+  color:white;
 }
 
 a.contact {    
@@ -65,13 +65,26 @@ a.contact {
 a.contact:hover {
   transform: translateY(-2px);
 }
-
+.he{
+  font-weight: bold;
+  color: white;
+}
+.hee{
+  font-style: italic;
+  color: white;
+}
+.fa-bars{
+  color:white
+}
+.it{
+  font-weight: bold;
+}
 a.phone{
-  color:black;
+  color: white;
 
 }
 a.envelope{
-  color:black;
+  color:white;
 }
 .card{
   padding: 25px 50px;
@@ -85,6 +98,11 @@ a.envelope{
 }
 .para{
   font-style: italic;
+  color: white;
+}
+.paraa{
+  
+  color: white;
 }
 .item{
   text-align: center;
@@ -94,24 +112,24 @@ a.envelope{
   display: inline-block;
 }
 .pa{
-  color:black;
+  color:white;
 }
 .title-ans{
-  color: black;
+  color:white;
   font-weight: bolder;
 }
 .title-anss{
   padding-bottom: 20px;
   font-size: 40px;
-  color: black;
+  color: white;
   font-weight: bolder;
 }
 .ans{
-  font-weight: bolder;
-  color: black;
+  font-weight: 500;
+  color: white;
 }
 .btn{
-    color: black;
+    color: white;
 }
 .collapse{
   padding-left: 295px;
@@ -271,7 +289,7 @@ height: 100%;
 
 .next {
   top: 35%;
-  right: 1.5rem;
+  right: 19rem;
 }
 .prev {
   top: 35%;
@@ -282,6 +300,271 @@ hr {
   height: 2px;
   background: white;
   width: 50%;
+}
+.titlee {
+  color: white;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 50px;
+  text-transform: uppercase;
+}
+.titleee {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 50px;
+  text-transform: uppercase;
+}
+.tag{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.cont{
+  margin-bottom: 9px;
+}
+.lis{
+  padding-top: 40px;
+}
+.d-block1{
+  padding-left: 500px;
+}
+
+body {
+  background-color:  #eee;
+}
+.title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+  font-weight: bold;
+  margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding-right: 0px ;
+    padding-left: 0px;
+    padding-top: 0px;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+    block-size: 290px;
+    margin-left: 20px;
+    margin-right: 300px;
+}
+.card1 {
+  background-color: white;
+    font-size: 1em;
+    overflow: hidden;
+    padding-right: 0px ;
+    padding-left: 0px;
+    padding-top: 0px;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+    block-size: 290px;
+    margin-left: 300px;
+    margin-right: 20px;
+}
+
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators .active {
+    background-color: white;
+    max-width: 12px;
+    margin: 0 3px;
+    height: 12px;
+}
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  
+}
+
+.btn {
+  margin-top: auto;
+  
+}
+
+
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--dark-text);
+  margin: 1.5rem 0;
+}
+
+.title p {
+  width: 50%;
+  min-width: 40rem;
+  margin: 0 auto;
+  color: var(--dark-text);
+}
+
+.features-content {
+  display: flex;
+  justify-content: center;
+  /* padding: 3rem 0; */
+}
+
+.features-left {
+  flex: 1;
+  text-align: center;
+}
+.features-left img {
+  width: 65%;
+}
+.features-right {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .features-content {
+    flex-direction: column;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.feature-icon {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.inner-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feature-text h3 {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--light-blue);
+}
+section#footer {
+  background: var(--dark-blue);
+  color: #fff;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 2rem;
+  column-gap: 1px;
+}
+
+/* .footer > * {
+  flex: 1;
+  justify-self: center;
+} */
+
+.footer h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer-box {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.footer-links a {
+  font-size: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.question {
+  border: 1px solid var(--light-blue);
+  border-radius: 3px;
+  width: 90%;
+  max-width: 60rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* padding-bottom: 1rem; */
+}
+
+.question-title h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+button.question-icons {
+  border: 1px solid var(--color-grey);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 @keyframes App-logo-spin {
   from {
