@@ -130,7 +130,7 @@ const InvestorSignup = () => {
                         type="submit"
                         class="btn btn-primary btn-block mb-4"
                       >
-                        Sign up
+                        Sign up as an Investor
                       </button>
 
                       <div class="text-center">
