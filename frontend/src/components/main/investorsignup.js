@@ -173,16 +173,32 @@ const InvestorSignup = () => {
                           <i class="fab fa-github"></i>
                         </button>
                       </div>
+                      <a class="small text-muted" href="#!">
+                            Forgot password?
+                          </a>
+                          <p class="sign mb-5 pb-lg-2" style={{ color: "black" }}>
+                            Already have an account?{" "}
+                            <a class="si" href="./investorlogin" style={{ color: "blue" }  }>
+                              Sign in here
+                            </a>
+                          </p>
+                          <a href="#!" class="small text-muted">
+                            Terms of use.
+                          </a>
+                          <a href="#!" class="small text-muted">
+                            Privacy policy
+                          </a>
                     </form>
                   )}
                 </Formik>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 mb-5 mb-lg-0">
+          
+                    
+          <div class="col-md-6 col-lg-5 d-none d-md-block">
             <img
-              src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg"
+              src="http://localhost:5000/images/investorbg.jpg"
               class="w-100 rounded-4 shadow-4"
               alt=""
             />

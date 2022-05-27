@@ -71,25 +71,25 @@ const Header = () => {
                     id="navbarSupportedContent"
                   >
                     <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0 ">
-                      <li class="nav-item it ">
-                        <a
-                          class="nav-link"
-                          href="./Home"
+                    <li class="nav-item it">
+                        <NavLink
+                          className="nav-link"
+                          to="/main/home"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
                           Home
-                        </a>
+                        </NavLink>
                       </li>
                       <li class="nav-item it">
-                        <a
-                          class="nav-link"
-                          href="./About"
+                        <NavLink
+                          className="nav-link"
+                          to="/main/About"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
                           | About Us
-                        </a>
+                        </NavLink>
                       </li>
                       <li class="nav-item it">
                         <NavLink
@@ -102,15 +102,16 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li class="nav-item it">
-                        <a
-                          class="nav-link"
-                          href="./FAQ"
+                        <NavLink
+                          className="nav-link"
+                          to="/main/Faq"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
                           | FAQs
-                        </a>
+                        </NavLink>
                       </li>
+                      
                     </ul>
                   </div>
                   <div class="d-flex align-items-center">

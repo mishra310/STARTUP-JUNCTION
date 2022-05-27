@@ -12,7 +12,7 @@ const Feature = ({ icon, heading, text }) => {
 
       <div className="feature-text">
         <h3>{heading}</h3>
-        <p className="u-text-small">{text}</p>
+        <p className="paraa">{text}</p>
       </div>
     </div>
   );

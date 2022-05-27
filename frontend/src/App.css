@@ -31,11 +31,11 @@
   background: hsl(36, 100%, 51%) ;
   padding: 25px 50px;
 }
-a.social {
+/*a.social {
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
-}
+}/*/
 a.social:hover {
   transform: translateY(-2px);
 }
@@ -91,11 +91,11 @@ a.envelope{
   margin-top: 50px;
   margin-bottom: 50px;
 
-}
-.card-body{
+}*/
+.card-body3{
   text-align: center;
   padding: 25px;
-} */
+} 
 .para{
   font-style: italic;
   color: white;
@@ -367,6 +367,20 @@ body {
     margin-left: 20px;
     margin-right: 300px;
 } */
+.card3 {
+    font-size: 1em;
+    overflow: hidden;
+    padding-right: 0px ;
+    padding-left: 0px;
+    padding-top: 0px;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+    block-size: 290px;
+    margin-left: 20px;
+    margin-right: 300px;
+} 
 .card1 {
   background-color: white;
     font-size: 1em;
@@ -420,6 +434,7 @@ body {
 .title {
   text-align: center;
   margin-bottom: 4rem;
+  color: white;
 }
 
 .title h2 {
@@ -429,6 +444,8 @@ body {
   text-transform: uppercase;
   color: var(--dark-text);
   margin: 1.5rem 0;
+  color: white;
+  font-weight: bold;
 }
 
 .title p {
@@ -481,10 +498,11 @@ body {
 
 .feature-text h3 {
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 450;
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--light-blue);
+  color: white;
 }
 section#footer {
   background: var(--dark-blue);

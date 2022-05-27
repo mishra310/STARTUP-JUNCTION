@@ -206,7 +206,7 @@ const Profile = (props) => {
                       label="Reason"
                       variant="filled"
                       name="reason"
-                      onChange={handleChange} 
+                      onChange={handleChange}
                       value={values.reason}
                     />
                     <TextField
