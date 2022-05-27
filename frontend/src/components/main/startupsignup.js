@@ -2,6 +2,7 @@ import { Button, Container, Paper, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
 import app_config from "../../config";
 
 const StartupSignup = () => {
@@ -35,6 +36,11 @@ const StartupSignup = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Startup Registered",
+        });
       });
     //
   };
@@ -144,9 +150,16 @@ const StartupSignup = () => {
                           <a class="small text-muted" href="#!">
                             Forgot password?
                           </a>
-                          <p class="sign mb-5 pb-lg-2" style={{ color: "black" }}>
+                          <p
+                            class="sign mb-5 pb-lg-2"
+                            style={{ color: "black" }}
+                          >
                             Already have an account?{" "}
-                            <a class="si" href="./startuplogin" style={{ color: "blue" }  }>
+                            <a
+                              class="si"
+                              href="./startuplogin"
+                              style={{ color: "blue" }}
+                            >
                               Sign in here
                             </a>
                           </p>

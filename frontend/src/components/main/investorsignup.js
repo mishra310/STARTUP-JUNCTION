@@ -8,7 +8,7 @@ const InvestorSignup = () => {
 
   // 1. create an object to initialize formik
   const userForm = {
-    username: "",
+    name: "",
     password: "",
     email: "",
     age: 0,
@@ -74,37 +74,25 @@ const InvestorSignup = () => {
                 <Formik initialValues={userForm} onSubmit={userSubmit}>
                   {({ values, handleSubmit, handleChange }) => (
                     <form onSubmit={handleSubmit}>
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input
-                              type="text"
-                              id="form3Example1"
-                              class="form-control"
-                            />
-                            <label class="form-label" for="form3Example1">
-                              First name
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input
-                              type="text"
-                              id="form3Example2"
-                              class="form-control"
-                            />
-                            <label class="form-label" for="form3Example2">
-                              Last name
-                            </label>
-                          </div>
-                        </div>
+                      <div class="form-outline mb-4">
+                        <input
+                          type="text"
+                          id="name"
+                          onChange={handleChange}
+                          value={values.name}
+                          class="form-control"
+                        />
+                        <label class="form-label" for="form3Example2">
+                          Full name
+                        </label>
                       </div>
 
                       <div class="form-outline mb-4">
                         <input
                           type="email"
-                          id="form3Example3"
+                          id="email"
+                          onChange={handleChange}
+                          value={values.email}
                           class="form-control"
                         />
                         <label class="form-label" for="form3Example3">
@@ -115,7 +103,9 @@ const InvestorSignup = () => {
                       <div class="form-outline mb-4">
                         <input
                           type="password"
-                          id="form3Example4"
+                          id="password"
+                          onChange={handleChange}
+                          value={values.password}
                           class="form-control"
                         />
                         <label class="form-label" for="form3Example4">
@@ -174,28 +164,31 @@ const InvestorSignup = () => {
                         </button>
                       </div>
                       <a class="small text-muted" href="#!">
-                            Forgot password?
-                          </a>
-                          <p class="sign mb-5 pb-lg-2" style={{ color: "black" }}>
-                            Already have an account?{" "}
-                            <a class="si" href="./investorlogin" style={{ color: "blue" }  }>
-                              Sign in here
-                            </a>
-                          </p>
-                          <a href="#!" class="small text-muted">
-                            Terms of use.
-                          </a>
-                          <a href="#!" class="small text-muted">
-                            Privacy policy
-                          </a>
+                        Forgot password?
+                      </a>
+                      <p class="sign mb-5 pb-lg-2" style={{ color: "black" }}>
+                        Already have an account?{" "}
+                        <a
+                          class="si"
+                          href="./investorlogin"
+                          style={{ color: "blue" }}
+                        >
+                          Sign in here
+                        </a>
+                      </p>
+                      <a href="#!" class="small text-muted">
+                        Terms of use.
+                      </a>
+                      <a href="#!" class="small text-muted">
+                        Privacy policy
+                      </a>
                     </form>
                   )}
                 </Formik>
               </div>
             </div>
           </div>
-          
-                    
+
           <div class="col-md-6 col-lg-5 d-none d-md-block">
             <img
               src="http://localhost:5000/images/investorbg.jpg"

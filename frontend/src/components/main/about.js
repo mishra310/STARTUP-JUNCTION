@@ -25,31 +25,6 @@ const myintro = (link, title, subtitle, category, category1, category2) => {
   );
 };
 
-const myintro = (link, title, subtitle, category, category1, category2) => {
-  return (
-    <div class="container">
-      <img
-        alt=""
-        className="card-img-top"
-        src={"http://localhost:5000/images/logo.svg"}
-        width="120px"
-        height="120px"
-      />
-      <div class="card-body3">
-        <h3 class="title-ans">{title}</h3>
-        <h6 class="paraa">{subtitle}</h6>
-        <id class="para">
-          <p>" {category} "</p>
-        </id>
-        <div class="paraa">
-          <p>{category1}</p>
-          <p>{category2}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const About = () => {
   return (
     <div className="container emp-profile">
