@@ -12,6 +12,7 @@ const InvestorSignup = () => {
     password: "",
     email: "",
     age: 0,
+    avatar: "avatar_image.png",
   };
 
   //   2. create a callback function for form submission
@@ -117,8 +118,9 @@ const InvestorSignup = () => {
                         <input
                           class="form-check-input me-2"
                           type="checkbox"
-                          value=""
-                          id="form2Example33"
+                          value={values.password}
+                          id="password"
+                          onChange={handleChange}
                           checked
                         />
                         <label class="form-check-label" for="form2Example33">
