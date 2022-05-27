@@ -36,7 +36,6 @@ const StartupSignup = () => {
       .then((data) => {
         console.log(data);
       });
-
     //
   };
 

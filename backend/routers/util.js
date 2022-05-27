@@ -64,4 +64,8 @@ router.post("/", (req, res) => {
     });
 });
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> 86e8db64348e4cefe317c9440a88246a0d89c004

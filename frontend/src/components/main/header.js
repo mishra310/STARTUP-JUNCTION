@@ -102,9 +102,15 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li class="nav-item it">
+<<<<<<< HEAD
                         <NavLink
                           className="nav-link"
                           to="/main/Faq"
+=======
+                        <a
+                          class="nav-link"
+                          href="./FAQ"
+>>>>>>> 86e8db64348e4cefe317c9440a88246a0d89c004
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
