@@ -59,7 +59,7 @@ const StartupSignup = () => {
 
   //   3. add formik in jsx
   return (
-    <section class="vh-100" style={{ backgroundColor: "#9A616D" }}>
+    <section class="vh-100" style={{ backgroundColor: "#ffb84d" }}>
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-xl-10">
@@ -67,10 +67,12 @@ const StartupSignup = () => {
               <div class="row g-0">
                 <div class="col-md-6 col-lg-5 d-none d-md-block">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                    src="http://localhost:5000/images/startupbg.jpg"
                     alt="login form"
                     class="img-fluid"
                     style={{ borderRadius: "1rem 0 0 1rem" }}
+                    width="1800px"
+                    height="180px"
                   />
                 </div>
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
@@ -143,10 +145,10 @@ const StartupSignup = () => {
                           <a class="small text-muted" href="#!">
                             Forgot password?
                           </a>
-                          <p class="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
-                            Don't have an account?{" "}
-                            <a href="#!" style={{ color: "#393f81" }}>
-                              Register here
+                          <p class="sign mb-5 pb-lg-2" style={{ color: "black" }}>
+                            Already have an account?{" "}
+                            <a class="si" href="./startuplogin" style={{ color: "blue" }  }>
+                              Sign in here
                             </a>
                           </p>
                           <a href="#!" class="small text-muted">

@@ -7,6 +7,14 @@ import {
   FaEnvelope,
   FaGlobe,
 } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faYoutube,
+    faFacebook,
+    faTwitter,
+    faInstagram
+  } from "@fortawesome/free-brands-svg-icons";
+
 import Question from "./Question"
 const Footer = () => {
   return (
@@ -23,6 +31,21 @@ const Footer = () => {
           <div className="footer-contact u-text-small">
             <p>
               <FaMapMarkerAlt /> &nbsp; Address: Lucknow.
+            </p>
+            <p>
+            <a href="https://www.facebook.com/Startup-Muneem-105782222143086" className="facebook social">
+        <FontAwesomeIcon icon={faFacebook}  />
+      </a> &nbsp; MuneemStartup
+            </p>
+            <p>
+            <a href="https://twitter.com/MuneemStartup" className="twitter social">
+        <FontAwesomeIcon icon={faTwitter}  />
+      </a> &nbsp; MuneemStartup
+            </p>
+            <p>
+            <a href="https://www.instagram.com/startupmuneem/" className="twitter social">
+        <FontAwesomeIcon icon={faInstagram}  />
+      </a> &nbsp; Startupmuneem
             </p>
             <p>
               <FaPhoneAlt /> &nbsp; Phone: +91 7510 076 937.

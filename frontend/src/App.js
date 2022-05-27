@@ -8,7 +8,7 @@ import Home from "./components/main/home";
 //import RecoveryPassword from '../containers/RecoveryPassword'
 import Dashboard from "./components/admin/dashboard";
 import NotFound from "./components/main/404";
-import About from "./components/main/About";
+import About from "./components/main/about";
 //import Slider from "./components/main/slider";
 import Contact from "./components/main/Contact";
 import Header from "./components/main/header";
@@ -21,6 +21,8 @@ import Faq from "./components/main/Faq";
 import StartupSignup from "./components/main/startupsignup";
 import InvestorSignup from "./components/main/investorsignup";
 import StartupList from "./components/main/StartupList";
+import User from "./components/user";
+import Profile from "./components/user/profile";
 
 function App() {
   const age = 34;
@@ -39,6 +41,10 @@ function App() {
           <Route element={<StartupLogin />} path="startuplogin" />
           <Route element={<StartupList />} path="startuplist" />
           <Route element={<InvestorLogin />} path="investorlogin" />
+        </Route>
+
+        <Route element={<User />} path="user">
+          <Route element={<Profile />} path="profile" />
         </Route>
         <Route element={<NotFound />} path="404" />
         <Route element={<Dashboard />} path="dashboard" />

@@ -14,12 +14,12 @@ const Profile = (props) => {
   const url = app_config.backend_url;
 
   useEffect(() => {
-    fetch(url + "/user/getbyid/" + currentUser._id)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setUpdateForm(data);
-      });
+    // fetch(url + "/user/getbyid/" + currentUser._id)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setUpdateForm(data);
+    //   });
     console.log(currentUser);
   }, []);
 
@@ -99,9 +99,7 @@ const Profile = (props) => {
                 src={
                   url +
                   "/uploads/" +
-                  (currentUser.avatar
-                    ? currentUser.avatar
-                    : "avatar_image.webp")
+                  (currentUser.avatar ? currentUser.avatar : "avatar_image.png")
                 }
                 className="img-fluid"
                 alt=""
@@ -126,9 +124,9 @@ const Profile = (props) => {
                       className="mt-4 w-100"
                       label="Full Name"
                       variant="filled"
-                      name="fullname"
+                      name="name"
                       onChange={handleChange}
-                      value={values.fullname}
+                      value={values.name}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -144,7 +142,7 @@ const Profile = (props) => {
                       variant="filled"
                       name="description"
                       onChange={handleChange}
-                      value={values.age}
+                      value={values.description}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -154,8 +152,8 @@ const Profile = (props) => {
                       variant="filled"
                       onChange={handleChange}
                       value={values.password}
-                      />
-                      <TextField
+                    />
+                    <TextField
                       className="mt-4 w-100"
                       label="Username"
                       variant="filled"
@@ -191,7 +189,7 @@ const Profile = (props) => {
                       className="mt-4 w-100"
                       label="Started On"
                       variant="filled"
-                      name="startedon"
+                      name="started on"
                       onChange={handleChange}
                       value={values.startedon}
                     />
@@ -199,7 +197,7 @@ const Profile = (props) => {
                       className="mt-4 w-100"
                       label="Amount Needed"
                       variant="filled"
-                      name="amountneeded"
+                      name="amount needed"
                       onChange={handleChange}
                       value={values.amountneeded}
                     />
@@ -215,9 +213,9 @@ const Profile = (props) => {
                       className="mt-4 w-100"
                       label="Social Media Handle"
                       variant="filled"
-                      name="socialmediahandle"
+                      name="social media handle"
                       onChange={handleChange}
-                      value={values.socialmediahandle}
+                      value={values.socialmedia}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -227,6 +225,7 @@ const Profile = (props) => {
                       onChange={handleChange}
                       value={values.website}
                     />
+
 
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
