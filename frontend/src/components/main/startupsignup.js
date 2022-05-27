@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 import app_config from "../../config";
 
 const StartupSignup = () => {
-    const url = app_config.backend_url;
-    
+  const url = app_config.backend_url;
+
   // 1. create an object to initialize formik
   const userForm = {
     username: "",
@@ -25,7 +25,7 @@ const StartupSignup = () => {
     // 4. Data format
 
     // to request on backend
-    fetch(url + "/startup/add", {
+    fetch(url + "/user/add", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: {
@@ -59,61 +59,113 @@ const StartupSignup = () => {
 
   //   3. add formik in jsx
   return (
-    <Paper>
-      <Container>
-      <div style={{ background:"hsl(36, 100%, 51%)"  }}>
-        <Formik initialValues={userForm} onSubmit={userSubmit}>
-          {({ values, handleSubmit, handleChange }) => (
-            <form onSubmit={handleSubmit}>
-              <TextField
-                label="Username"
-                variant="outlined"
-                id="username"
-                onChange={handleChange}
-                value={values.username}
-              />
-              <TextField
-                label="Email"
-                variant="outlined"
-                id="email"
-                onChange={handleChange}
-                value={values.email}
-              />
-              <TextField
-                type="password"
-                label="Password"
-                variant="outlined"
-                id="password"
-                onChange={handleChange}
-                value={values.password}
-              />
-              <TextField
-                type="number"
-                label="Age"
-                variant="outlined"
-                id="age"
-                onChange={handleChange}
-                value={values.age}
-              />
+    <section class="vh-100" style={{ backgroundColor: "#9A616D" }}>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card" style={{ borderRadius: "1rem" }}>
+              <div class="row g-0">
+                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                    alt="login form"
+                    class="img-fluid"
+                    style={{ borderRadius: "1rem 0 0 1rem" }}
+                  />
+                </div>
+                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div class="card-body p-4 p-lg-5 text-black">
+                    <Formik initialValues={userForm} onSubmit={userSubmit}>
+                      {({ values, handleSubmit, handleChange }) => (
+                        <form onSubmit={handleSubmit}>
+                          <div class="d-flex align-items-center mb-3 pb-1">
+                            <i
+                              class="fas fa-cubes fa-2x me-3"
+                              style={{ color: "#ff6219" }}
+                            ></i>
+                            <span class="h1 fw-bold mb-0">STARTUP MUNEEM</span>
+                          </div>
 
-              <Button type="submit" variant="contained">
-                Submit
-              </Button>
+                          <h5
+                            class="fw-normal mb-3 pb-3"
+                            style={{ letterSpacing: "1px" }}
+                          >
+                            Create your account
+                          </h5>
 
-              <input
-                type="file"
-                className="form-control"
-                onChange={uploadFile}
-              />
-            </form>
-          )}
-          
-        </Formik>
-        <p class="ro">Already Registered? <NavLink to="/StartupLogin" >Sign in</NavLink></p>
+                          <div class="form-outline mb-4">
+                            <input
+                              type="text"
+                              id="username"
+                              value={values.username}
+                              onChange={handleChange}
+                              class="form-control form-control-lg"
+                            />
+                            <label class="form-label" for="form2Example17">
+                              Username
+                            </label>
+                          </div>
+                          <div class="form-outline mb-4">
+                            <input
+                              type="email"
+                              id="email"
+                              value={values.email}
+                              onChange={handleChange}
+                              class="form-control form-control-lg"
+                            />
+                            <label class="form-label" for="form2Example17">
+                              Email address
+                            </label>
+                          </div>
+
+                          <div class="form-outline mb-4">
+                            <input
+                              type="password"
+                              id="password"
+                              value={values.password}
+                              onChange={handleChange}
+                              class="form-control form-control-lg"
+                            />
+                            <label class="form-label" for="form2Example27">
+                              Password
+                            </label>
+                          </div>
+
+                          <div class="pt-1 mb-4">
+                            <button
+                              class="btn btn-dark btn-lg btn-block"
+                              type="submit"
+                            >
+                              Login
+                            </button>
+                          </div>
+
+                          <a class="small text-muted" href="#!">
+                            Forgot password?
+                          </a>
+                          <p class="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                            Don't have an account?{" "}
+                            <a href="#!" style={{ color: "#393f81" }}>
+                              Register here
+                            </a>
+                          </p>
+                          <a href="#!" class="small text-muted">
+                            Terms of use.
+                          </a>
+                          <a href="#!" class="small text-muted">
+                            Privacy policy
+                          </a>
+                        </form>
+                      )}
+                    </Formik>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      </Container>
-    </Paper>
-    
+    </section>
   );
 };
 

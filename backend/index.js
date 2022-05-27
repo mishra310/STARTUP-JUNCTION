@@ -22,10 +22,10 @@ app.use(
   })
 );
 
-app.use(express.static('./static'))
+app.use(express.static("./static"));
 
 // using middleware
-app.use("/startup", StartupRouter);
+app.use("/user", StartupRouter);
 app.use("/investor", InvestorRouter);
 
 // endpoints or route

@@ -86,7 +86,7 @@ a.phone{
 a.envelope{
   color:white;
 }
-.card{
+/* .card{
   padding: 25px 50px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -95,7 +95,7 @@ a.envelope{
 .card-body{
   text-align: center;
   padding: 25px;
-}
+} */
 .para{
   font-style: italic;
   color: white;
@@ -353,7 +353,7 @@ body {
     box-shadow: none;
      
 }
-.card {
+/* .card {
     font-size: 1em;
     overflow: hidden;
     padding-right: 0px ;
@@ -366,7 +366,7 @@ body {
     block-size: 290px;
     margin-left: 20px;
     margin-right: 300px;
-}
+} */
 .card1 {
   background-color: white;
     font-size: 1em;
