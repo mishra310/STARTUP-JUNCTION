@@ -145,7 +145,7 @@ const StartupSignup = () => {
                               class="btn btn-dark btn-lg btn-block"
                               type="submit"
                             >
-                              Login
+                              Sign Up as a Start-up
                             </button>
                           </div>
 
