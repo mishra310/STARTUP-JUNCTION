@@ -9,7 +9,6 @@ import Swal from "sweetalert2";
 import app_config from "../../config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faYoutube,
     faFacebook,
     faTwitter,
     faInstagram
