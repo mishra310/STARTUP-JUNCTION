@@ -60,7 +60,7 @@ const StartupList = () => {
 
               <div class="col-sm-7">
                 <div class="lis">
-                  <h4 class="title">{name}</h4>
+                  <h3 class="">{name}</h3>
                   <p class="tag">The Legacy Continues</p>
                   <p>{description}</p>
                   <br />

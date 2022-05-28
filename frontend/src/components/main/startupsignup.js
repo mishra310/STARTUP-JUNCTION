@@ -1,13 +1,13 @@
 import { Button, Container, Paper, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import app_config from "../../config";
 
 const StartupSignup = () => {
   const url = app_config.backend_url;
-
+  const navigate = useNavigate();
   // 1. create an object to initialize formik
   const userForm = {
     username: "",
@@ -41,6 +41,7 @@ const StartupSignup = () => {
           title: "Success",
           text: "Startup Registered",
         });
+        navigate("/main/startuplogin");
       });
     //
   };

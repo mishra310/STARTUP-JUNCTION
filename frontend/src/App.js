@@ -23,6 +23,8 @@ import InvestorSignup from "./components/main/investorsignup";
 import StartupList from "./components/main/StartupList";
 import User from "./components/user";
 import Profile from "./components/user/profile";
+import ManageUser from "./components/admin/manageuser";
+import Admin from "./components/admin";
 
 function App() {
   const age = 34;
@@ -45,6 +47,11 @@ function App() {
 
         <Route element={<User />} path="user">
           <Route element={<Profile />} path="profile" />
+        </Route>
+
+        <Route element={<Admin />} path="admin">
+          {/* <Route element={<Profile />} path="profile" /> */}
+          <Route element={<ManageUser />} path="manageuser" />
         </Route>
         <Route element={<NotFound />} path="404" />
         <Route element={<Dashboard />} path="dashboard" />

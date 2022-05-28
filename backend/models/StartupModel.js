@@ -8,6 +8,7 @@ const schema = new mongoose.Schema({
   description: String,
   brochure: String,
   avatar: String,
+  password: String,
   Startedon: Number,
   AmountNeeded: Number,
   Reason: String,
