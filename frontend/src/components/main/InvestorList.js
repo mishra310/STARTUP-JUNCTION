@@ -11,8 +11,7 @@ const InvestorList = () => {
           <div className="card-body">
             <h4>{title}</h4>
             <p>{category}</p>
-
-            <button
+           <button
                       type="button"
                       class="btn btn-primary px-3 mb-2 me-3"
                       aria-controls="#picker-editor"
@@ -40,16 +39,16 @@ const InvestorList = () => {
           </div>
           <div className="col-md-4">
             {mycard(
-              "https://www.denofgeek.com/wp-content/uploads/2022/02/doctor-strange-in-the-multiverse-of-madness.png?resize=768%2C432",
-              "Dr. Strange : Multiverse of Madness",
-              "Horror"
+              "http://localhost:5000/images/Pra.jpg",
+              "Prakarsh Tarun",
+              "bio"
             )}
           </div>
           <div className="col-md-4">
             {mycard(
-              "https://www.denofgeek.com/wp-content/uploads/2022/02/doctor-strange-in-the-multiverse-of-madness.png?resize=768%2C432",
-              "Dr. Strange : Multiverse of Madness",
-              "Thriller"
+              "http://localhost:5000/images/LakhanPahad.jpg",
+              "Lakhan Singh",
+              "bio"
             )}
           </div>
         </div>
