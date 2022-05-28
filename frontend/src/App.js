@@ -21,6 +21,7 @@ import Faq from "./components/main/Faq";
 import StartupSignup from "./components/main/startupsignup";
 import InvestorSignup from "./components/main/investorsignup";
 import StartupList from "./components/main/StartupList";
+import InvestorList from "./components/main/InvestorList";
 import User from "./components/user";
 import Profile from "./components/user/profile";
 import ManageUser from "./components/admin/manageuser";
@@ -42,6 +43,7 @@ function App() {
           <Route element={<StartupSignup />} path="startupsignup" />
           <Route element={<StartupLogin />} path="startuplogin" />
           <Route element={<StartupList />} path="startuplist" />
+          <Route element={<InvestorList />} path="investorlist" />
           <Route element={<InvestorLogin />} path="investorlogin" />
         </Route>
 
