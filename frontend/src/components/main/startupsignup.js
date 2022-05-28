@@ -1,13 +1,13 @@
 import { Button, Container, Paper, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import app_config from "../../config";
 
 const StartupSignup = () => {
   const url = app_config.backend_url;
-
+  const navigate = useNavigate();
   // 1. create an object to initialize formik
   const userForm = {
     username: "",
@@ -41,6 +41,7 @@ const StartupSignup = () => {
           title: "Success",
           text: "Startup Registered",
         });
+        navigate("/main/startuplogin");
       });
     //
   };
@@ -64,8 +65,9 @@ const StartupSignup = () => {
 
   //   3. add formik in jsx
   return (
-    <section class="vh-100" style={{ backgroundColor: "#ffb84d" }}>
-      <div class="container py-5 h-100">
+    <section class="vh-200" style={{ backgroundColor: "#ffb84d" }}>
+      <div class="lof">
+      <div class="container py-5 h-200">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-xl-10">
             <div class="card" style={{ borderRadius: "1rem" }}>
@@ -86,10 +88,11 @@ const StartupSignup = () => {
                       {({ values, handleSubmit, handleChange }) => (
                         <form onSubmit={handleSubmit}>
                           <div class="d-flex align-items-center mb-3 pb-1">
-                            <i
-                              class="fas fa-cubes fa-2x me-3"
-                              style={{ color: "#ff6219" }}
-                            ></i>
+                          <img
+                    src="http://localhost:5000/images/logo.svg"
+                    alt="logo" 
+                    width="60px"
+                    height="60px"/>
                             <span class="h1 fw-bold mb-0">STARTUP MUNEEM</span>
                           </div>
 
@@ -178,6 +181,7 @@ const StartupSignup = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
