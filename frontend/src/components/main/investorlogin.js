@@ -14,7 +14,7 @@ import {
     faInstagram
   } from "@fortawesome/free-brands-svg-icons";
 
-const StartupLogin = ({ username, age }) => {
+const InvestorLogin = ({ username, age }) => {
     const url = app_config.backend_url;
 
   // 1. formobject
@@ -29,7 +29,7 @@ const StartupLogin = ({ username, age }) => {
   const loginSubmit = (formdata) => {
     console.log(formdata);
 
-    fetch(url + "/startuplogin/authenticate", {
+    fetch(url + "/investorlogin/authenticate", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: { "Content-Type": "application/json" },
@@ -139,4 +139,4 @@ const StartupLogin = ({ username, age }) => {
   );
 };
 
-export default StartupLogin;
+export default InvestorLogin;
