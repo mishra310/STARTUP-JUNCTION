@@ -100,19 +100,19 @@ const StartupSignup = () => {
                             class="fw-normal mb-3 pb-3"
                             style={{ letterSpacing: "1px" }}
                           >
-                            Create your account
+                            Create your account for registering your start-up
                           </h5>
 
                           <div class="form-outline mb-4">
                             <input
                               type="text"
-                              id="username"
-                              value={values.username}
+                              id="name"
+                              value={values.name}
                               onChange={handleChange}
                               class="form-control form-control-lg"
                             />
                             <label class="form-label" for="form2Example17">
-                              Username
+                              Full Name
                             </label>
                           </div>
                           <div class="form-outline mb-4">
@@ -124,7 +124,7 @@ const StartupSignup = () => {
                               class="form-control form-control-lg"
                             />
                             <label class="form-label" for="form2Example17">
-                              Email address
+                              Email Address
                             </label>
                           </div>
 
@@ -138,6 +138,18 @@ const StartupSignup = () => {
                             />
                             <label class="form-label" for="form2Example27">
                               Password
+                            </label>
+                          </div>
+                          <div class="form-outline mb-4">
+                            <input
+                              type="contact"
+                              id="contact"
+                              value={values.contact}
+                              onChange={handleChange}
+                              class="form-control form-control-lg"
+                            />
+                            <label class="form-label" for="form2Example27">
+                              Mobile Number
                             </label>
                           </div>
 

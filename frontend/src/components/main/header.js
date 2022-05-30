@@ -104,6 +104,16 @@ const Header = () => {
                       <li class="nav-item it">
                         <NavLink
                           className="nav-link"
+                          to="/main/investorlist"
+                          aria-controls="#picker-editor"
+                          draggable="false"
+                        >
+                          | Explore Investors
+                        </NavLink>
+                      </li>
+                      <li class="nav-item it">
+                        <NavLink
+                          className="nav-link"
                           to="/main/Faq"
                           aria-controls="#picker-editor"
                           draggable="false"

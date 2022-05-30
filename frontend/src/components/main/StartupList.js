@@ -64,9 +64,14 @@ const StartupList = () => {
                   <p class="tag">The Legacy Continues</p>
                   <p>{description}</p>
                   <br />
-                  <button class="btn btn-warning btn-sm float-right">
-                    Read More to Invest
-                  </button>
+                  <button
+                      type="button"
+                      class="btn btn-warning px-3 mb-2 me-3"
+                      aria-controls="#picker-editor"
+                      onClick={(e) => navigate("./main/StartupList")}
+                    >
+                      Read More to Invest
+                    </button>
                 </div>
               </div>
             </div>

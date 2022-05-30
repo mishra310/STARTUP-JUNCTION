@@ -27,7 +27,8 @@ const InvestorList = () => {
   
     return (
       <div className="container">
-        
+        <h3 class="titlee">Investor Listing</h3>
+      
         
         <div className="row">
           <div className="col-md-4">

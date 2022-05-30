@@ -93,7 +93,9 @@ const Profile = (props) => {
       <Card>
         <CardContent>
           <div className="row">
-            <h3 className="text-center">Manage Profile</h3>
+          <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="text-right"> Manage Your Profile</h2>
+                </div>
             <div className="col-md-4">
               <img
                 src={
@@ -163,20 +165,31 @@ const Profile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      label="Contact"
+                      label="Mobile Number"
                       variant="filled"
                       name="contact"
                       onChange={handleChange}
                       value={values.contact}
                     />
-                    <TextField
-                      className="mt-4 w-100"
-                      label="Brochure"
-                      variant="filled"
-                      name="brochure"
-                      onChange={handleChange}
-                      value={values.brochure}
-                    />
+                    <p className="mt-4 w-100">Brouchre</p>
+                    <img
+                    src={
+                      url +
+                      "/uploads/" +
+                      (currentUser.brouchre ? currentUser.brouchre : "brouchre-image.img")
+                    }
+                    className="img-thumbnail"
+                    alt=""
+                    width="200px"
+                  />
+                  <br />
+                  <label className="mt-3">Change Brouchre</label>
+                  <input
+                    className="form-control"
+                    type="file"
+                    onChange={uploadThumbnail}
+                    
+                  />
                     <TextField
                       className="mt-4 w-100"
                       label="Avatar"
@@ -229,7 +242,7 @@ const Profile = (props) => {
 
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
-                        Submit
+                        Save Chnages
                       </button>
                     </div>
                   </form>
