@@ -3,7 +3,7 @@ import React from "react";
 const Dashboard = () => {
   return (
     <div className="container-fluid">
-      <h3 className="text-muted my-3">Admin Dashboard</h3>
+      <h3 className="titlee ">Admin Dashboard</h3>
       <div className="row">
         <div className="col-md-3 mt-4">
           <div className="card border border-primary">

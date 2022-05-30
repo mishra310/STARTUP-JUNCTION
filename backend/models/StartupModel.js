@@ -14,6 +14,8 @@ const schema = new mongoose.Schema({
   Reason: String,
   socialMediaHandle: String,
   website: String,
+  aadhar : String,
+  pan : String,
   createdAt: { type: Date, default: new Date() },
 });
 

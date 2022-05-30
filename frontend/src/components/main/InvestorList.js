@@ -27,8 +27,14 @@ const InvestorList = () => {
   
     return (
       <div className="container">
+
         <h3 class="titlee">Investor Listing</h3>
-      
+      <nav class="navbar navbar-expand-lg navbar-light ">
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      </form>
+</nav>
         
         <div className="row">
           <div className="col-md-4">

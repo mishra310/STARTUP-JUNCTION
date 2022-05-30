@@ -75,17 +75,12 @@ const StartupLogin = ({ username, age }) => {
                 <form onSubmit={handleSubmit}>
                   
                   <div class="container btna">
-                  <a href=""
-        className="facebook social">
-        <FontAwesomeIcon icon={faFacebook} size="xl" />
-      </a>
-      <a href="" className="twitter social">
-        <FontAwesomeIcon icon={faTwitter} size="xl" />
-      </a>
-      <a href=""
-        className="instagram social">
-        <FontAwesomeIcon icon={faInstagram} size="xl" />
-      </a>
+                  <button 
+                          type="button"
+                          class="btn btn-dark btn-floating mx-1"
+                        >
+                          <i class="fab fa-google"></i>
+                        </button>
             </div>
             <div class="divider d-flex align-items-center my-4">
             <p class="text-center fw-bold mx-3 mb-0">Or</p>
@@ -130,7 +125,7 @@ const StartupLogin = ({ username, age }) => {
                     Sign in
                   </Button>
                   <div className="text-center text-lg-start mt-4 pt-2">
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="./investorsignup"
                 class="link-danger">Register</a></p>
           </div>
 

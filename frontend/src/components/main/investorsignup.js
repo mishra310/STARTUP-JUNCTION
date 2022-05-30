@@ -59,12 +59,14 @@ const InvestorSignup = () => {
   //   3. add formik in jsx
   return (
     <section class="text-center text-lg-start">
+      
       <div class="container py-4">
         <div class="row g-0 align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div
               class="card cascading-right"
               style={{
+                
                 background: "hsla(0, 0%, 100%, 0.55)",
                 backdropFilter: "blur(30px)",
               }}
@@ -112,6 +114,18 @@ const InvestorSignup = () => {
                           Password
                         </label>
                       </div>
+                      <div class="form-outline mb-4">
+                        <input
+                          type="number"
+                          id="contact"
+                          onChange={handleChange}
+                          value={values.contact}
+                          class="form-control"
+                        />
+                        <label class="form-label" for="form3Example4">
+                          Mobile Number
+                        </label>
+                      </div>
 
                       <div class="form-check d-flex justify-content-center mb-4">
                         <input
@@ -135,13 +149,7 @@ const InvestorSignup = () => {
 
                       <div class="text-center">
                         <p>or sign up with:</p>
-                        <button
-                          type="button"
-                          class="btn btn-link btn-floating mx-1"
-                        >
-                          <i class="fab fa-facebook-f"></i>
-                        </button>
-
+                        
                         <button
                           type="button"
                           class="btn btn-link btn-floating mx-1"
@@ -149,19 +157,6 @@ const InvestorSignup = () => {
                           <i class="fab fa-google"></i>
                         </button>
 
-                        <button
-                          type="button"
-                          class="btn btn-link btn-floating mx-1"
-                        >
-                          <i class="fab fa-twitter"></i>
-                        </button>
-
-                        <button
-                          type="button"
-                          class="btn btn-link btn-floating mx-1"
-                        >
-                          <i class="fab fa-github"></i>
-                        </button>
                       </div>
                       <a class="small text-muted" href="#!">
                         Forgot password?
@@ -185,6 +180,7 @@ const InvestorSignup = () => {
                     </form>
                   )}
                 </Formik>
+              
               </div>
             </div>
           </div>
