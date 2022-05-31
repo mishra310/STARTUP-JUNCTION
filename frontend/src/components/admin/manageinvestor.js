@@ -80,7 +80,7 @@ const ManageInvestor = () => {
   return (
     <div>
       <div className="container">
-        <h1>Manage User</h1>
+        <h1>Manage investor</h1>
         <hr />
         {showUsers()}
       </div>
