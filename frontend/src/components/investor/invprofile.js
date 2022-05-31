@@ -8,7 +8,7 @@ import app_config from "../../config";
 const InvProfile = (props) => {
   const [updateForm, setUpdateForm] = useState({});
   const [currentUser, setCurrentUser] = useState(
-    JSON.parse(sessionStorage.getItem("user"))
+    JSON.parse(sessionStorage.getItem("investor"))
   );
   const [selImage, setSelImage] = useState("");
   const url = app_config.backend_url;
@@ -24,7 +24,7 @@ const InvProfile = (props) => {
   }, []);
 
   const onFormSubmit = (value, { setSubmitting }) => {
-    fetch(url + "/user/update/" + currentUser._id, {
+    fetch(url + "/investor/update/" + currentUser._id, {
       method: "PUT",
       body: JSON.stringify(value),
       headers: {
@@ -35,7 +35,7 @@ const InvProfile = (props) => {
         res.json().then((data) => {
           console.log(data);
           setCurrentUser(data);
-          sessionStorage.setItem("user", JSON.stringify(data));
+          sessionStorage.setItem("investor", JSON.stringify(data));
         });
       }
       Swal.fire({
@@ -56,7 +56,7 @@ const InvProfile = (props) => {
       body: fd,
     }).then((res) => {
       if (res.status === 200) {
-        fetch(url + "/user/update/" + currentUser._id, {
+        fetch(url + "/investor/update/" + currentUser._id, {
           method: "PUT",
           body: JSON.stringify({ avatar: file.name }),
           headers: {
@@ -68,7 +68,7 @@ const InvProfile = (props) => {
             res.json().then((data) => {
               console.log(data);
               setCurrentUser(data);
-              sessionStorage.setItem("user", JSON.stringify(data));
+              sessionStorage.setItem("investor", JSON.stringify(data));
             });
           }
           Swal.fire({
@@ -93,9 +93,9 @@ const InvProfile = (props) => {
       <Card>
         <CardContent>
           <div className="row">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="text-right"> Manage Your Profile</h2>
-                </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="text-right"> Manage Your Profile</h2>
+            </div>
             <div className="col-md-4">
               <img
                 src={
@@ -173,23 +173,24 @@ const InvProfile = (props) => {
                     />
                     <p className="mt-4 w-100">Brouchre</p>
                     <img
-                    src={
-                      url +
-                      "/uploads/" +
-                      (currentUser.brouchre ? currentUser.brouchre : "brouchre-image.img")
-                    }
-                    className="img-thumbnail"
-                    alt=""
-                    width="200px"
-                  />
-                  <br />
-                  <label className="mt-3">Change Brouchre</label>
-                  <input
-                    className="form-control"
-                    type="file"
-                    onChange={uploadThumbnail}
-                    
-                  />
+                      src={
+                        url +
+                        "/uploads/" +
+                        (currentUser.brouchre
+                          ? currentUser.brouchre
+                          : "brouchre-image.img")
+                      }
+                      className="img-thumbnail"
+                      alt=""
+                      width="200px"
+                    />
+                    <br />
+                    <label className="mt-3">Change Brouchre</label>
+                    <input
+                      className="form-control"
+                      type="file"
+                      onChange={uploadThumbnail}
+                    />
                     <TextField
                       className="mt-4 w-100"
                       label="Avatar"
@@ -238,7 +239,6 @@ const InvProfile = (props) => {
                       onChange={handleChange}
                       value={values.website}
                     />
-
 
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
