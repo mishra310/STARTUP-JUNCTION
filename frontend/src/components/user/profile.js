@@ -88,14 +88,55 @@ const Profile = (props) => {
     });
   };
 
+  const uploadBrochure = (e) => {
+    const file = e.target.files[0];
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch(url + "/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        addBrochure(file.name);
+        toast.success("Image Uploaded!!", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+      }
+    });
+  };
+
+  const addBrochure = (filename) => {
+    fetch(url + "/user/pushupdate/" + currentUser._id, {
+      method: "PUT",
+      body: JSON.stringify({
+        brochures: filename,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      if (res.status === 200) {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Brochure Added!!",
+        });
+      }
+    });
+  };
+
   return (
     <div className="col-md-10 mx-auto">
       <Card>
         <CardContent>
           <div className="row">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="text-right"> Manage Your Profile</h2>
-                </div>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="text-right"> Manage Your Profile</h2>
+            </div>
             <div className="col-md-4">
               <img
                 src={
@@ -173,23 +214,19 @@ const Profile = (props) => {
                     />
                     <p className="mt-4 w-100">Brouchre</p>
                     <img
-                    src={
-                      url +
-                      "/uploads/" +
-                      (currentUser.brouchre ? currentUser.brouchre : "brouchre-image.img")
-                    }
-                    className="img-thumbnail"
-                    alt=""
-                    width="200px"
-                  />
-                  <br />
-                  <label className="mt-3">Change Brouchre</label>
-                  <input
-                    className="form-control"
-                    type="file"
-                    onChange={uploadThumbnail}
-                    
-                  />
+                      src={
+                        url +
+                        "/uploads/" +
+                        (currentUser.brouchre
+                          ? currentUser.brouchre
+                          : "brouchre-image.img")
+                      }
+                      className="img-thumbnail"
+                      alt=""
+                      width="200px"
+                    />
+                    <br />
+
                     <TextField
                       className="mt-4 w-100"
                       label="Avatar"
@@ -239,7 +276,6 @@ const Profile = (props) => {
                       value={values.website}
                     />
 
-
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
                         Save Chnages
@@ -252,6 +288,28 @@ const Profile = (props) => {
           </div>
         </CardContent>
       </Card>
+      <div className="card mt-4">
+        <div className="card-body">
+          <label className="mt-3 btn btn-dark" htmlFor="bup">
+            Upload Brouchre
+          </label>
+          <input
+            className="hidden"
+            type="file"
+            id="bup"
+            onChange={uploadBrochure}
+          />
+          <hr />
+          <div className="row">
+            {currentUser.brochures.map((brochure) => (
+              <div className="col-2">
+                {/* <img src={url + "/uploads/" + brochure} alt="" /> */}
+                <p>{brochure}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

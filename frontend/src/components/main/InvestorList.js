@@ -1,10 +1,47 @@
 import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import app_config from "../../config";
 
 const InvestorList = () => {
   const navigate = useNavigate();
 
-  const mycard = (link, title, category) => {
+  const url = app_config.backend_url;
+
+  const [dataList, setDataList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = () => {
+    fetch(url + "/investor/getall").then((res) => {
+      if (res.status === 200) {
+        res.json().then((data) => {
+          console.log(data);
+          setLoading(false);
+          setDataList(data);
+        });
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const showData = () => {
+    if (!loading) {
+      return dataList.map((investor) => (
+        <div className="col-md-4 mt-5">
+          {mycard(investor._id, investor.avatar, investor.name, investor.bio)}
+        </div>
+      ));
+    }
+  };
+
+  const mycard = (id, link, title, category) => {
+    if (!link) {
+      link =
+        "https://media.istockphoto.com/photos/concentrated-young-african-man-in-formalwear-picture-id1194668220?k=20&m=1194668220&s=612x612&w=0&h=xO1YmVH1Mfx07HikpPubuIs4Vu4bKxMkN7q67GG2ZJg=";
+    }
     return (
       <div className="card">
         <img alt="" className="card-img-top" src={link} />
@@ -15,7 +52,7 @@ const InvestorList = () => {
             type="button"
             class="btn btn-primary px-3 mb-2 me-3"
             aria-controls="#picker-editor"
-            onClick={(e) => navigate("/main/displayup/")}
+            onClick={(e) => navigate("/main/displayup/" + id)}
           >
             Know More
           </button>
@@ -41,29 +78,7 @@ const InvestorList = () => {
         </form>
       </nav>
 
-      <div className="row">
-        <div className="col-md-4">
-          {mycard(
-            "http://localhost:5000/images/ShikharPaan.jpg",
-            "Shikhar Srivastava",
-            " bio"
-          )}
-        </div>
-        <div className="col-md-4">
-          {mycard(
-            "http://localhost:5000/images/Pra.jpg",
-            "Prakarsh Tarun",
-            "bio"
-          )}
-        </div>
-        <div className="col-md-4">
-          {mycard(
-            "http://localhost:5000/images/LakhanPahad.jpg",
-            "Lakhan Singh",
-            "bio"
-          )}
-        </div>
-      </div>
+      <div className="row">{showData()}</div>
     </div>
   );
 };

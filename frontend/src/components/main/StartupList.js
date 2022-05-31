@@ -9,6 +9,10 @@ const StartupList = () => {
   const [datalist, setDatalist] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [keyword, setKeyword] = useState("");
+
+  const filters = ["Sort by Newest"];
+
   const fetchData = () => {
     fetch(url + "/user/getall").then((res) => {
       if (res.status === 200) {
@@ -22,6 +26,7 @@ const StartupList = () => {
   };
 
   const [filter, setFilter] = useState("");
+  const [selFilter, setSelFilter] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -46,9 +51,9 @@ const StartupList = () => {
           createdAt,
           _id,
         }) => (
-          <div key={_id} class="card float-right">
+          <div key={_id} class="card float-right mt-5">
             <div class="row">
-              <div class="col-sm-5">
+              <div class="col-sm-5 mt-5">
                 <img
                   class="d-block"
                   width="550px"
@@ -82,7 +87,7 @@ const StartupList = () => {
   };
 
   const applyfilter = () => {
-    fetch(url + "/slide/getall")
+    fetch(url + "/user/getall")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -96,7 +101,7 @@ const StartupList = () => {
   };
 
   const applyCategoryfilter = (cate) => {
-    fetch(url + "/slide/getall")
+    fetch(url + "/user/getall")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -109,18 +114,77 @@ const StartupList = () => {
       });
   };
 
+  const applySearch = () => {};
+
+  const searchCard = () => {
+    return (
+      <div className="pt-5">
+        <div className="card ">
+          <div className="card-header bg-white p-4">
+            <div class="input-group rounded">
+              <input
+                style={{ border: "none", outline: "none" }}
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+                onChange={(e) => setKeyword(e.target.value)}
+              />
+              <span
+                class="input-group-text border-0 bg-white"
+                id="search-addon"
+                onClick={applySearch}
+              >
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+          <div className="card-body p-4">
+            <p className="text-muted">ADVANCED SEARCH</p>
+            <div className="row">
+              <div className="col-sm-3">
+                {filters.map((name) => {
+                  return (
+                    <>
+                      <button
+                        onClick={(e) => setSelFilter(name)}
+                        className={
+                          "btn btn-" +
+                          (name === selFilter ? "" : "outline-") +
+                          "primary"
+                        }
+                      >
+                        {name}
+                      </button>
+                      &nbsp; &nbsp;
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  function compare(a, b) {
+    if (a.last_nom < b.last_nom) {
+      return -1;
+    }
+    if (a.last_nom > b.last_nom) {
+      return 1;
+    }
+    return 0;
+  }
+
   return (
-    
-    <div classname="container">
-      
+    <div className="container">
       <h3 class="titlee">Start-Up Listing</h3>
-      <nav class="navbar navbar-expand-lg navbar-light ">
-      <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-      </form>
-</nav>
-      <div className="container">{displayData()}</div>
+      <hr />
+      {searchCard()}
+      <div className="mt-5">{displayData()}</div>
     </div>
   );
 };

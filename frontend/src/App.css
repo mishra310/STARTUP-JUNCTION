@@ -585,10 +585,7 @@ button.question-icons {
   align-items: center;
   cursor: pointer;
 }
-.lof{
-  
 
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -596,4 +593,8 @@ button.question-icons {
   to {
     transform: rotate(360deg);
   }
+}
+
+.hidden{
+  display: none;
 }
