@@ -16,7 +16,6 @@ import Footer from "./components/main/footer";
 import StartupLogin from "./components/main/startuplogin";
 import InvestorLogin from "./components/main/investorlogin";
 import Main from "./components/main";
-//import Investor from "./components/investor";
 import Faq from "./components/main/Faq";
 //import Sidebar from './components/main/sidebar';
 import StartupSignup from "./components/main/startupsignup";
@@ -30,7 +29,9 @@ import InvProfile from "./components/investor/invprofile";
 import ManageUser from "./components/admin/manageuser";
 import ManageInvestor from "./components/admin/manageinvestor";
 import Admin from "./components/admin";
-
+import Investor from "./components/investor";
+import InvestorChat from "./components/user/chat";
+import UserChat from "./components/user/chat";
 
 function App() {
   return (
@@ -47,28 +48,30 @@ function App() {
           <Route element={<StartupList />} path="startuplist" />
           <Route element={<InvestorList />} path="investorlist" />
           <Route element={<InvestorLogin />} path="investorlogin" />
-          <Route element={<Displayup />} path="displayup" />
+          <Route element={<Displayup />} path="displayup/:id" />
         </Route>
 
         <Route element={<User />} path="user">
           <Route element={<Profile />} path="profile" />
+          <Route element={<UserChat />} path="chat" />
         </Route>
-        {/*<Route element={<Investor />} path="investor">
+        <Route element={<Investor />} path="investor">
           <Route element={<InvProfile />} path="invprofile" />
-        </Route>*/}
+          <Route element={<InvestorChat />} path="chat" />
+        </Route>
 
         <Route element={<Admin />} path="admin">
-        <Route element={<Dashboard />} path="dashboard" />
+          <Route element={<Dashboard />} path="dashboard" />
           {/* <Route element={<Profile />} path="profile" /> */}
           <Route element={<ManageUser />} path="manageuser" />
           <Route element={<ManageInvestor />} path="manageinvestor" />
         </Route>
         <Route element={<NotFound />} path="404" />
-        
+
         <Route element={<Navigate to="/main/home"></Navigate>} path="/" />
         <Route element={<Navigate to="/404"></Navigate>} path="*" />
       </Routes>
-      
+
       <Footer />
     </BrowserRouter>
   );

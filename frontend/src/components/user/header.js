@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   // const url = app_config.backend_url;
@@ -102,14 +102,14 @@ const Header = () => {
                         </a>
                       </li>
                       <li class="nav-item it">
-                        <NavLink
-                          className="nav-link"
-                          to="/main/investorlist"
+                        <Link
+                          class="nav-link"
+                          to="/user/chat"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
-                          | Explore Investors
-                        </NavLink>
+                          | Chat
+                        </Link>
                       </li>
                     </ul>
                   </div>

@@ -1,31 +1,9 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   // const url = app_config.backend_url;
   const navigate = useNavigate();
-
-  const [currentInvestor, setCurrentInvestor] = useState(
-    JSON.parse(sessionStorage.getItem("investor"))
-  );
-
-  const showInvestor = () => {
-    if (currentInvestor !== null) {
-      return (
-        <li class="nav-item it">
-          <NavLink
-            className="nav-link"
-            to="/investor/profile"
-            aria-controls="#picker-editor"
-            draggable="false"
-          >
-            | Investor
-          </NavLink>
-        </li>
-      );
-    }
-  };
 
   return (
     <div id="preview" class="preview">
@@ -143,7 +121,16 @@ const Header = () => {
                           | FAQs
                         </NavLink>
                       </li>
-                      {showInvestor()}
+                      <li class="nav-item it">
+                        <Link
+                          className="nav-link"
+                          to="/investor/chat"
+                          aria-controls="#picker-editor"
+                          draggable="false"
+                        >
+                          | Chat
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div class="d-flex align-items-center">

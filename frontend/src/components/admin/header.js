@@ -16,11 +16,11 @@ const Header = () => {
         <li class="nav-item it">
           <NavLink
             className="nav-link"
-            to="/investor/profile"
+            to="/main/Faq"
             aria-controls="#picker-editor"
             draggable="false"
           >
-            | Investor
+            | FAQs
           </NavLink>
         </li>
       );
@@ -116,21 +116,21 @@ const Header = () => {
                       <li class="nav-item it">
                         <NavLink
                           className="nav-link"
-                          to="/main/startuplist"
+                          to="/admin/manageuser"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
-                          | Explore Startups
+                          | Manage Startups
                         </NavLink>
                       </li>
                       <li class="nav-item it">
                         <NavLink
                           className="nav-link"
-                          to="/main/investorlist"
+                          to="/admin/manageinvestor"
                           aria-controls="#picker-editor"
                           draggable="false"
                         >
-                          | Explore Investors
+                          | Manage Investors
                         </NavLink>
                       </li>
                       <li class="nav-item it">
