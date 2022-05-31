@@ -10,23 +10,7 @@ const Header = () => {
     JSON.parse(sessionStorage.getItem("investor"))
   );
 
-  const showInvestor = () => {
-    if (currentInvestor !== null) {
-      return (
-        <li class="nav-item it">
-          <NavLink
-            className="nav-link"
-            to="/investor/profile"
-            aria-controls="#picker-editor"
-            draggable="false"
-          >
-            | Investor
-          </NavLink>
-        </li>
-      );
-    }
-  };
-
+  
   return (
     <div id="preview" class="preview">
       <div style={{ display: "none" }}></div>
@@ -143,7 +127,7 @@ const Header = () => {
                           | FAQs
                         </NavLink>
                       </li>
-                      {showInvestor()}
+                      
                     </ul>
                   </div>
                   <div class="d-flex align-items-center">

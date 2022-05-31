@@ -3,11 +3,12 @@ import { Formik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
 
-const UpdateInvestor = ({ userForm, loadDataFromBackend, showForm }) => {
+const UpdateUser = ({ userForm, loadDataFromBackend, showForm }) => {
   const userSubmit = (formdata) => {
     console.log(formdata);
 
     // to send request on backend
+    
     // 1. url
     // 2. request method
     // 3. data

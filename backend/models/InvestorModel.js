@@ -2,13 +2,14 @@
 const mongoose = require("../connection");
 
 const schema = new mongoose.Schema({
-  username: String,
+  
   name: String,
   email: String,
   contact: Number,
   age: Number,
-  educationQualification : String,
-  linkedInProfile : String,
+  avatar: String,
+  EducationQualification : String,
+  LinkedInProfile : String,
   socialMediaHandle : String,
   description : String,
   createdAt: { type: Date, default: new Date() },
