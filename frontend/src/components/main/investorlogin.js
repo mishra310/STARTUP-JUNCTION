@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const StartupLogin = ({ username, age }) => {
+const InvestorLogin = ({ username, age }) => {
   const url = app_config.backend_url;
 
   // 1. formobject
@@ -159,4 +159,4 @@ const StartupLogin = ({ username, age }) => {
   );
 };
 
-export default StartupLogin;
+export default InvestorLogin;
