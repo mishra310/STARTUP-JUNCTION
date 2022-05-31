@@ -74,7 +74,7 @@ const InvestorLogin = ({ username, age }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "135vh",
+          height: "100vh",
         }}
       >
         <Card>

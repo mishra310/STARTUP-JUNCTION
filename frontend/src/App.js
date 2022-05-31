@@ -30,6 +30,8 @@ import ManageUser from "./components/admin/manageuser";
 import ManageInvestor from "./components/admin/manageinvestor";
 import Admin from "./components/admin";
 import Investor from "./components/investor";
+import InvestorChat from "./components/user/chat";
+import UserChat from "./components/user/chat";
 
 function App() {
   return (
@@ -51,9 +53,11 @@ function App() {
 
         <Route element={<User />} path="user">
           <Route element={<Profile />} path="profile" />
+          <Route element={<UserChat />} path="chat" />
         </Route>
         <Route element={<Investor />} path="investor">
           <Route element={<InvProfile />} path="invprofile" />
+          <Route element={<InvestorChat />} path="chat" />
         </Route>
 
         <Route element={<Admin />} path="admin">

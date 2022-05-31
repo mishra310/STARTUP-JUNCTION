@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   // const url = app_config.backend_url;
@@ -100,6 +100,16 @@ const Header = () => {
                         >
                           | FAQs
                         </a>
+                      </li>
+                      <li class="nav-item it">
+                        <Link
+                          class="nav-link"
+                          to="/user/chat"
+                          aria-controls="#picker-editor"
+                          draggable="false"
+                        >
+                          | Chat
+                        </Link>
                       </li>
                     </ul>
                   </div>

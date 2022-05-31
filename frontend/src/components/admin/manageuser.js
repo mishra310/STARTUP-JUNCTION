@@ -3,12 +3,16 @@ import React, { useEffect, useState } from "react";
 import app_config from "../../config";
 import { ExpandMore } from "@mui/icons-material";
 import toast from "react-hot-toast";
+import UpdateUser from "./UpdateUser";
 
 const ManageUser = () => {
   const url = app_config.backend_url;
 
   const [dataList, setDataList] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [showUpdateForm, setShowUpdateForm] = useState(false);
+  const [updateFormData, setUpdateFormData] = useState(null);
 
   const fetchData = () => {
     fetch(url + "/user/getall").then((res) => {
@@ -43,9 +47,9 @@ const ManageUser = () => {
 
   const updateUser = (userdata) => {
     // change the value of showUpdateForm to true
-    // setShowUpdateForm(true);
-    // // update the userFormData
-    // setUpdateFormData(userdata);
+    setShowUpdateForm(true);
+    // update the userFormData
+    setUpdateFormData(userdata);
   };
 
   const showUsers = () => {
@@ -82,7 +86,24 @@ const ManageUser = () => {
       <div className="container">
         <h1>Manage User</h1>
         <hr />
-        {showUsers()}
+        <div className="row">
+          <div className="col-md-8">{showUsers()}</div>
+          <div className="col-md-4">
+            <div className="card">
+              <div className="card-body">
+                {showUpdateForm ? (
+                  <UpdateUser
+                    userForm={updateFormData}
+                    loadDataFromBackend={fetchData}
+                    showForm={setShowUpdateForm}
+                  ></UpdateUser>
+                ) : (
+                  <h3 className="text-muted">Select User to Update</h3>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
 
-const UpdateUser = ({ userForm, loadDataFromBackend }) => {
+const UpdateUser = ({ userForm, loadDataFromBackend, showForm }) => {
   const userSubmit = (formdata) => {
     console.log(formdata);
 
@@ -66,6 +66,14 @@ const UpdateUser = ({ userForm, loadDataFromBackend }) => {
 
                 <Button type="submit" variant="contained">
                   Submit
+                </Button>
+                <Button
+                  type="button"
+                  onClick={(e) => showForm(false)}
+                  variant="contained"
+                  color="error"
+                >
+                  Cancel
                 </Button>
               </form>
             )}

@@ -14,8 +14,11 @@ const schema = new mongoose.Schema({
   Reason: String,
   socialMediaHandle: String,
   website: String,
-  aadhar : String,
-  pan : String,
+  aadhar: String,
+  pan: String,
+  city: String,
+  state: String,
+  isAdmin: { type: Boolean, default: false },
   createdAt: { type: Date, default: new Date() },
 });
 
