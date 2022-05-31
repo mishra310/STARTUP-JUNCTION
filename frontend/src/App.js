@@ -48,7 +48,7 @@ function App() {
           <Route element={<StartupList />} path="startuplist" />
           <Route element={<InvestorList />} path="investorlist" />
           <Route element={<InvestorLogin />} path="investorlogin" />
-          <Route element={<Displayup />} path="displayup" />
+          <Route element={<Displayup />} path="displayup/:id" />
         </Route>
 
         <Route element={<User />} path="user">
