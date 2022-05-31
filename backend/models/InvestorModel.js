@@ -1,4 +1,3 @@
-
 const mongoose = require("../connection");
 
 const schema = new mongoose.Schema({
@@ -6,11 +5,12 @@ const schema = new mongoose.Schema({
   name: String,
   email: String,
   contact: Number,
+  bio: String,
   age: Number,
-  educationQualification : String,
-  linkedInProfile : String,
-  socialMediaHandle : String,
-  description : String,
+  educationQualification: String,
+  linkedInProfile: String,
+  socialMediaHandle: String,
+  description: String,
   createdAt: { type: Date, default: new Date() },
 });
 
