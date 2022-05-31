@@ -10,6 +10,9 @@ const ManageInvestor = () => {
   const [dataList, setDataList] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [showUpdateForm, setShowUpdateForm] = useState(false);
+  const [updateFormData, setUpdateFormData] = useState(null);
+
   const fetchData = () => {
     fetch(url + "/user/getall").then((res) => {
       if (res.status === 200) {
