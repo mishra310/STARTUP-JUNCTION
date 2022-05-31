@@ -61,14 +61,14 @@ const StartupList = () => {
               <div class="col-sm-7">
                 <div class="lis">
                   <h3 class="">{name}</h3>
-                  <p class="tag">The Legacy Continues</p>
+                  <p class="tag"></p>
                   <p>{description}</p>
                   <br />
                   <button
                       type="button"
                       class="btn btn-warning px-3 mb-2 me-3"
                       aria-controls="#picker-editor"
-                      onClick={(e) => navigate("./main/StartupList")}
+                      onClick={(e) => navigate("./main/Displayup")}
                     >
                       Read More to Invest
                     </button>
