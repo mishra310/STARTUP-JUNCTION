@@ -2,19 +2,21 @@ import { Button, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
+import app_config from "../../config";
 
-const UpdateUser = ({ userForm, loadDataFromBackend, showForm }) => {
+const UpdateInvestor = ({ userForm, loadDataFromBackend, showForm }) => {
+  const url = app_config.backend_url;
   const userSubmit = (formdata) => {
     console.log(formdata);
 
     // to send request on backend
-    
+
     // 1. url
     // 2. request method
     // 3. data
     // 4. data format
 
-    fetch("http://localhost:5000/user/update/" + userForm._id, {
+    fetch(url + "/investor/update/" + userForm._id, {
       method: "PUT",
       body: JSON.stringify(formdata), //convert javascript to json
       headers: {

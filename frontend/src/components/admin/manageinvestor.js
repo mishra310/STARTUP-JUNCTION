@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import app_config from "../../config";
 import { ExpandMore } from "@mui/icons-material";
 import toast from "react-hot-toast";
+import UpdateInvestor from "./UpdateInvestor";
 
 const ManageInvestor = () => {
   const url = app_config.backend_url;
@@ -14,7 +15,7 @@ const ManageInvestor = () => {
   const [updateFormData, setUpdateFormData] = useState(null);
 
   const fetchData = () => {
-    fetch(url + "/user/getall").then((res) => {
+    fetch(url + "/investor/getall").then((res) => {
       if (res.status === 200) {
         res.json().then((data) => {
           console.log(data);
@@ -32,7 +33,7 @@ const ManageInvestor = () => {
   const deleteUser = (id) => {
     console.log(id);
 
-    fetch(url + "/user/delete/" + id, {
+    fetch(url + "/investor/delete/" + id, {
       method: "DELETE",
     }).then((res) => {
       if (res.status === 200) {
@@ -46,9 +47,9 @@ const ManageInvestor = () => {
 
   const updateUser = (userdata) => {
     // change the value of showUpdateForm to true
-    // setShowUpdateForm(true);
-    // // update the userFormData
-    // setUpdateFormData(userdata);
+    setShowUpdateForm(true);
+    // update the userFormData
+    setUpdateFormData(userdata);
   };
 
   const showUsers = () => {
@@ -56,7 +57,7 @@ const ManageInvestor = () => {
       return dataList.map((data) => (
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
-            {data.username}
+            {data.name}
           </AccordionSummary>
           <AccordionDetails>
             <p className="text-muted">Email</p>
@@ -85,7 +86,24 @@ const ManageInvestor = () => {
       <div className="container">
         <h1>Manage investor</h1>
         <hr />
-        {showUsers()}
+        <div className="row">
+          <div className="col-md-8">{showUsers()}</div>
+          <div className="col-md-4">
+            <div className="card">
+              <div className="card-body">
+                {showUpdateForm ? (
+                  <UpdateInvestor
+                    userForm={updateFormData}
+                    loadDataFromBackend={fetchData}
+                    showForm={setShowUpdateForm}
+                  ></UpdateInvestor>
+                ) : (
+                  <h3 className="text-muted">Select User to Update</h3>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

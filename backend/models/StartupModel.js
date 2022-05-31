@@ -19,6 +19,7 @@ const schema = new mongoose.Schema({
   city: String,
   state: String,
   brochures: Array,
+
   isAdmin: { type: Boolean, default: false },
   createdAt: { type: Date, default: new Date() },
 });
