@@ -148,20 +148,12 @@ const InvProfile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      type="password"
-                      label="Password"
-                      name="password"
+                      label="Age"
                       variant="filled"
+                      
+                      name="age"
                       onChange={handleChange}
-                      value={values.password}
-                    />
-                    <TextField
-                      className="mt-4 w-100"
-                      label="Username"
-                      variant="filled"
-                      name="username"
-                      onChange={handleChange}
-                      value={values.username}
+                      value={values.age}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -170,26 +162,6 @@ const InvProfile = (props) => {
                       name="contact"
                       onChange={handleChange}
                       value={values.contact}
-                    />
-                    <p className="mt-4 w-100">Brouchre</p>
-                    <img
-                      src={
-                        url +
-                        "/uploads/" +
-                        (currentUser.brouchre
-                          ? currentUser.brouchre
-                          : "brouchre-image.img")
-                      }
-                      className="img-thumbnail"
-                      alt=""
-                      width="200px"
-                    />
-                    <br />
-                    <label className="mt-3">Change Brouchre</label>
-                    <input
-                      className="form-control"
-                      type="file"
-                      onChange={uploadThumbnail}
                     />
                     <TextField
                       className="mt-4 w-100"
@@ -201,45 +173,12 @@ const InvProfile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      label="Started On"
-                      variant="filled"
-                      name="started on"
-                      onChange={handleChange}
-                      value={values.startedon}
-                    />
-                    <TextField
-                      className="mt-4 w-100"
-                      label="Amount Needed"
-                      variant="filled"
-                      name="amount needed"
-                      onChange={handleChange}
-                      value={values.amountneeded}
-                    />
-                    <TextField
-                      className="mt-4 w-100"
-                      label="Reason"
-                      variant="filled"
-                      name="reason"
-                      onChange={handleChange}
-                      value={values.reason}
-                    />
-                    <TextField
-                      className="mt-4 w-100"
                       label="Social Media Handle"
                       variant="filled"
                       name="social media handle"
                       onChange={handleChange}
                       value={values.socialmedia}
                     />
-                    <TextField
-                      className="mt-4 w-100"
-                      label="Website"
-                      variant="filled"
-                      name="website"
-                      onChange={handleChange}
-                      value={values.website}
-                    />
-
                     <div className="text-center">
                       <button className="btn btn-primary mt-5 w-100">
                         Save Chnages
