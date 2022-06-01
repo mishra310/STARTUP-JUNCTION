@@ -20,7 +20,7 @@ const Header = () => {
             aria-controls="#picker-editor"
             draggable="false"
           >
-            | FAQs
+            
           </NavLink>
         </li>
       );
