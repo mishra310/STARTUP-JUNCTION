@@ -10,7 +10,7 @@ import Dashboard from "./components/admin/dashboard";
 import NotFound from "./components/main/404";
 import About from "./components/main/about";
 //import Slider from "./components/main/slider";
-import Contact from "./components/main/Contact";
+import Contact from "./components/main/contact";
 import Header from "./components/main/header";
 import Footer from "./components/main/footer";
 import StartupLogin from "./components/main/startuplogin";
