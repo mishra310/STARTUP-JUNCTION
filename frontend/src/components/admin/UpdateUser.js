@@ -40,12 +40,12 @@ const UpdateUser = ({ userForm, loadDataFromBackend, showForm }) => {
             {({ handleSubmit, handleChange, values }) => (
               <form onSubmit={handleSubmit}>
                 <TextField
-                  label="Username"
+                  label="name"
                   variant="outlined"
                   className="w-100 mb-4"
                   id="username"
                   onChange={handleChange}
-                  value={values.username}
+                  value={values.name}
                 />
                 <TextField
                   label="Email"
@@ -62,6 +62,14 @@ const UpdateUser = ({ userForm, loadDataFromBackend, showForm }) => {
                   id="password"
                   onChange={handleChange}
                   value={values.password}
+                />
+                <TextField
+                  label="Mobile Number"
+                  variant="outlined"
+                  className="w-100 mb-4"
+                  id="number"
+                  onChange={handleChange}
+                  value={values.contact}
                 />
 
                 <Button type="submit" variant="contained">

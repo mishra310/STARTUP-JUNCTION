@@ -58,7 +58,7 @@ const Displayup = () => {
                   <label class="labels">Mobile Number :{profileData.contact}</label>
                 </div>
                 <div className="col-md-12">
-                  <label class="labels">Brouchre :</label>
+                  <label class="labels">Brochure :</label>
                 </div>
                 <div className="col-md-12">
                   <label class="labels">Amount Needed :</label>
@@ -70,7 +70,7 @@ const Displayup = () => {
                   <label class="labels">Social Media Handle :</label>
                 </div>
                 <div className="col-md-12">
-                  <label class="labels">Webiste :</label>
+                  <label class="labels">Website :</label>
                 </div>
                 <div className="col-md-12">
                   <label class="labels">Address</label>

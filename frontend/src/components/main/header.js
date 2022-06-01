@@ -127,6 +127,7 @@ const Header = () => {
                           | FAQs
                         </NavLink>
                       </li>
+                                    
                       
                     </ul>
                   </div>
