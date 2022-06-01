@@ -49,13 +49,13 @@ const Displayup = () => {
                   <label class="labels">Full Name : {profileData.name} </label>
                 </div>
                 <div className="col-md-12">
-                  <label class="labels">Email ID :</label>
+                  <label class="labels">Email ID :{profileData.email}</label>
                 </div>
                 <div className="col-md-12">
-                  <label class="labels">Description :</label>
+                  <label class="labels">Discription :{profileData.discription}</label>
                 </div>
                 <div className="col-md-12">
-                  <label class="labels">Mobile Number :</label>
+                  <label class="labels">Mobile Number :{profileData.contact}</label>
                 </div>
                 <div className="col-md-12">
                   <label class="labels">Brochure :</label>

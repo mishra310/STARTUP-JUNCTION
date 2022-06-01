@@ -52,7 +52,7 @@ const InvestorList = () => {
             type="button"
             class="btn btn-primary px-3 mb-2 me-3"
             aria-controls="#picker-editor"
-            onClick={(e) => navigate("/main/displayup/" + id)}
+            onClick={(e) => navigate("/main/Displayup/" + id)}
           >
             Know More
           </button>

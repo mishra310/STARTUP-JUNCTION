@@ -60,13 +60,24 @@ const ManageUser = () => {
             {data.username}
           </AccordionSummary>
           <AccordionDetails>
+            <p className="text-muted">Name</p>
+            <h3>{data.name}</h3>
             <p className="text-muted">Email</p>
             <h3>{data.email}</h3>
+            <p className="text-muted">Mobile Number</p>
+            <h3>{data.contact}</h3>
+            <p className="text-muted">city</p>
+            <h3>{data.city}</h3>
+            <p className="text-muted">state</p>
+            <h3>{data.state}</h3>
+            <p className="text-muted">brouchures</p>
+            <h3>{data.brouchures}</h3>
+            
             <button
               className="btn btn-danger"
               onClick={(e) => deleteUser(data._id)}
             >
-              <i class="fas fa-trash"></i> Delete
+              <i class="fas fa-trash"></i> Reject
             </button>
             &nbsp;
             <button
