@@ -70,8 +70,8 @@ const ManageUser = () => {
             <h3>{data.city}</h3>
             <p className="text-muted">state</p>
             <h3>{data.state}</h3>
-            <p className="text-muted">brouchures</p>
-            <h3>{data.brouchures}</h3>
+            <p className="text-muted">brochures</p>
+            <h3>{data.brochures}</h3>
             
             <button
               className="btn btn-danger"
