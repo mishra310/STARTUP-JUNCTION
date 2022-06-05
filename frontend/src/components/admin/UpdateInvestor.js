@@ -43,12 +43,12 @@ const UpdateInvestor = ({ userForm, loadDataFromBackend, showForm }) => {
             {({ handleSubmit, handleChange, values }) => (
               <form onSubmit={handleSubmit}>
                 <TextField
-                  label="Username"
+                  label="Name"
                   variant="outlined"
                   className="w-100 mb-4"
-                  id="username"
+                  id="name"
                   onChange={handleChange}
-                  value={values.username}
+                  value={values.name}
                 />
                 <TextField
                   label="Email"
