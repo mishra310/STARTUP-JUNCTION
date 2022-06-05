@@ -65,7 +65,7 @@ const Header = () => {
                             draggable="false"
                           >
                             <h3 class="he">StartUpMuneem</h3>
-                            <p class="hee">Funding Yahi Milti Hai</p>
+                            <p class="hee">Funds Yahi Milte Hai</p>
                           </a>
                         </li>
                       </li>
