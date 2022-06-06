@@ -19,9 +19,9 @@
     transition-duration: 300ms;
   }
   
-  .message-body:hover {
+  
     /* transform: translateY(-5px); */
-  }
+  
   
   .message-body p {
     margin: 0;

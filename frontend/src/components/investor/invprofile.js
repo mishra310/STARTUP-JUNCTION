@@ -140,11 +140,11 @@ const InvProfile = (props) => {
                     />
                     <TextField
                       className="mt-4 w-100"
-                      label="Description"
+                      label="Bio"
                       variant="filled"
-                      name="description"
+                      name="bio"
                       onChange={handleChange}
-                      value={values.description}
+                      value={values.bio}
                     />
                     <TextField
                       className="mt-4 w-100"

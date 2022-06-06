@@ -212,21 +212,7 @@ const Profile = (props) => {
                       onChange={handleChange}
                       value={values.contact}
                     />
-                    <p className="mt-4 w-100">Brouchre</p>
-                    <img
-                      src={
-                        url +
-                        "/uploads/" +
-                        (currentUser.brouchre
-                          ? currentUser.brouchre
-                          : "brouchre-image.img")
-                      }
-                      className="img-thumbnail"
-                      alt=""
-                      width="200px"
-                    />
-                    <br />
-
+                  
                     <TextField
                       className="mt-4 w-100"
                       label="Avatar"

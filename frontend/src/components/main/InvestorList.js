@@ -40,7 +40,7 @@ const InvestorList = () => {
   const mycard = (id, link, title, category) => {
     if (!link) {
       link =
-        "https://media.istockphoto.com/photos/concentrated-young-african-man-in-formalwear-picture-id1194668220?k=20&m=1194668220&s=612x612&w=0&h=xO1YmVH1Mfx07HikpPubuIs4Vu4bKxMkN7q67GG2ZJg=";
+        "";
     }
     return (
       <div className="card">
@@ -52,7 +52,7 @@ const InvestorList = () => {
             type="button"
             class="btn btn-primary px-3 mb-2 me-3"
             aria-controls="#picker-editor"
-            onClick={(e) => navigate("/main/displayup/" + id)}
+            onClick={(e) => navigate("/main/Displayup/" + id)}
           >
             Know More
           </button>

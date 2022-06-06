@@ -10,7 +10,7 @@ const myintro = (link, title, subtitle, category, category1, category2) => {
         width="120px"
         height="120px"
       />
-      <div class="card-body">
+      <div class="card-body3">
         <h3 class="title-ans">{title}</h3>
         <h6 class="paraa">{subtitle}</h6>
         <id class="para">

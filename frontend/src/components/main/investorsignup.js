@@ -1,10 +1,13 @@
 import { Button, Container, Paper, TextField } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import app_config from "../../config";
 
 const InvestorSignup = () => {
   const url = app_config.backend_url;
+  const navigate = useNavigate();
 
   // 1. create an object to initialize formik
   const userForm = {
@@ -34,8 +37,17 @@ const InvestorSignup = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Investor Registered",
+          
       });
-
+    }).then((res) => {
+      console.log(res.status);
+    });
+    navigate("/main/investorlogin");
+  
     //
   };
 

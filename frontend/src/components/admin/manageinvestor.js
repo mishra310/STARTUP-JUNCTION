@@ -60,8 +60,16 @@ const ManageInvestor = () => {
             {data.name}
           </AccordionSummary>
           <AccordionDetails>
+            <p className="text-muted">Name</p>
+            <h3>{data.name}</h3>
             <p className="text-muted">Email</p>
             <h3>{data.email}</h3>
+            <p className="text-muted">Mobile Number</p>
+            <h3>{data.contact}</h3>
+            <p className="text-muted">Bio</p>
+            <h3>{data.bio}</h3>
+            <p className="text-muted">Age</p>
+            <h3>{data.age}</h3>
             <button
               className="btn btn-danger"
               onClick={(e) => deleteUser(data._id)}

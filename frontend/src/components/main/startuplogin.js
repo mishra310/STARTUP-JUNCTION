@@ -80,7 +80,7 @@ const StartupLogin = ({ username, age }) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "135vh",
+          height: "105vh",
         }}
       >
         <Card>
@@ -127,7 +127,7 @@ const StartupLogin = ({ username, age }) => {
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="form-check mb-0">
                       <input
-                        class="form-check-input me-2"
+                  cd      class="form-check-input me-2"
                         type="checkbox"
                         value=""
                         id="form2Example3"
