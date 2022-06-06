@@ -44,7 +44,7 @@ const InvestorLogin = ({ username, age }) => {
           text: "Loggedin Successfully",
         });
         res.json().then((data) => {
-          sessionStorage.setItem("investor", JSON.stringify(formdata));
+          sessionStorage.setItem("investor", JSON.stringify(data));
           navigate("/investor/invprofile");
           return;
         });
@@ -55,8 +55,6 @@ const InvestorLogin = ({ username, age }) => {
           text: "Loggedin Failed",
         });
       }
-
-      return res.json();
     });
   };
 

@@ -7,6 +7,7 @@ const schema = new mongoose.Schema({
   bio: String,
   age: Number,
   avatar: String,
+  password: String,
   EducationQualification: String,
   LinkedInProfile: String,
   socialMediaHandle: String,
