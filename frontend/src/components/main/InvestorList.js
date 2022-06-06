@@ -39,12 +39,11 @@ const InvestorList = () => {
 
   const mycard = (id, link, title, category) => {
     if (!link) {
-      link =
-        "";
+      link = "placeholder.jpg";
     }
     return (
       <div className="card">
-        <img alt="" className="card-img-top" src={link} />
+        <img alt="" className="card-img-top" src={url + "/uploads/" + link} />
         <div className="card-body">
           <h4>{title}</h4>
           <p>{category}</p>
