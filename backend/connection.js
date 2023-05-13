@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const url =
-  "mongodb+srv://Akkian9918:Arudev12345@cluster0.4lnvh.mongodb.net/StartupMuneem?retryWrites=true&w=majority";
+  "mongodb+srv://mishra310:Saurav123@cluster0.rml5zxc.mongodb.net/StartupJunction?retryWrites=true&w=majority";
 
 // asynchronous function
 // returns promise
