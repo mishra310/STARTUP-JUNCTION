@@ -18,7 +18,7 @@ const Features = () => {
         </div>
         <div className="features-content">
           <div className="features-left" data-aos="fade-right">
-            <img src={"http://localhost:5000/images/textlogo1.png"} alt="phone" />
+            <img src={"C:\Users\HP\Desktop\STARTUP JUNCTION"} alt="phone" />
           </div>
           <div className="features-right" data-aos="fade-left">
             {FeatureList.map((feature) => (

@@ -35,7 +35,7 @@ const About = () => {
           alt=" startupmuneem logo"
           width="100px"
         />,
-        "StartUpMuneem",
+        "Startup Junction",
         "Funds Yahi Milte Hai",
         "Once upon a time generating funds for a start-up was a back-breaking task",
         "To prove this quote wrong we introduce you to StartupMuneem, a project that is designed with an idea to generate funds for start-ups by serving as a medium of communication between Start-ups and Investors.",

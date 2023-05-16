@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="footer-box">
           <h4>About US</h4>
           <div className="footer-links">
-          <p class="pa">StartupMuneem is a project that is designed with an idea to generate funds for start-ups by serving as a medium of communication between Start-ups and Investors."</p>
+          <p class="pa">Startup Junction is a project that is designed with an idea to generate funds for start-ups by serving as a medium of communication between Start-ups and Investors."</p>
           </div>
         </div>
           <div className="footer-box">
@@ -33,25 +33,25 @@ const Footer = () => {
               <FaMapMarkerAlt /> &nbsp; Address: Lucknow.
             </p>
             <p>
-            <a href="https://www.facebook.com/Startup-Muneem-105782222143086" className="facebook social">
+            <a href="https://www.facebook.com/startupjunction" className="facebook social">
         <FontAwesomeIcon icon={faFacebook}  />
-      </a> &nbsp; MuneemStartup
+      </a> &nbsp; startup_junction
             </p>
             <p>
-            <a href="https://twitter.com/MuneemStartup" className="twitter social">
+            <a href="https://twitter.com/Muneemjunction" className="twitter social">
         <FontAwesomeIcon icon={faTwitter}  />
-      </a> &nbsp; MuneemStartup
+      </a> &nbsp; startup_junction
             </p>
             <p>
-            <a href="https://www.instagram.com/startupmuneem/" className="twitter social">
+            <a href="https://www.instagram.com/startupjunction/" className="twitter social">
         <FontAwesomeIcon icon={faInstagram}  />
-      </a> &nbsp; Startupmuneem
+      </a> &nbsp; startup_junction
             </p>
             <p>
-              <FaPhoneAlt /> &nbsp; Phone: +91 7510 076 937.
+              <FaPhoneAlt /> &nbsp; Phone: +91 7800162000.
             </p>
             <p>
-              <FaEnvelope /> &nbsp; Email: startupmuneem3@gmail.com            </p>
+              <FaEnvelope /> &nbsp; Email: sjunction0012@gmail.com            </p>
            </div>
         </div>
         <div className="footer-box">

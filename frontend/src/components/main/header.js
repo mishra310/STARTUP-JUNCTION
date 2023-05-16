@@ -64,7 +64,7 @@ const Header = () => {
                             aria-controls="#picker-editor"
                             draggable="false"
                           >
-                            <h3 class="he">StartUpMuneem</h3>
+                            <h3 class="he">Startup Junction</h3>
                             <p class="hee">Funds Yahi Milte Hai</p>
                           </a>
                         </li>
